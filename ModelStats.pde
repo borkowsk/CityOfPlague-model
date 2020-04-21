@@ -32,10 +32,11 @@ void doStatisticsOnAgents(Agent[][] agents)
       liveCount++;
     }
   
-   outstat.println( "ST:\t"+StepCounter+"\t"+liveCount
-                           +"\tZ\t"+sumInfected+"\t"+newcas.get(newcas.size()-1)
-                           +"\tW\t"+sumRecovered+"\t"+cured.get(cured.size()-1)
-                           +"\tU\t"+sumDeath+"\t"+deaths.get(deaths.size()-1)
+   if(outstat!=null)
+      outstat.println( "ST:\t"+StepCounter+"\t"+liveCount
+                           +"\tZ\t"+sumInfected+"\t"+(newcas.size()>1?newcas.get(newcas.size()-1):0)
+                           +"\tW\t"+sumRecovered+"\t"+(cured.size()>1?cured.get(cured.size()-1):0)
+                           +"\tU\t"+sumDeath+"\t"+(deaths.size()>1?deaths.get(deaths.size()-1):0)
                            +"\t");
    
    //outstat should be closed in exit() --> see Exit.pde

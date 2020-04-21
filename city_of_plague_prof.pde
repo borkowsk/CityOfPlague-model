@@ -68,7 +68,7 @@ void setup()
   
   //INICJALIZACJA MODELU I (ewentualnie) STATYSTYK
   initializeModel(TheWorld);//DOKONCZENIE INICJALIZACJI ŚWIATA
-  initializeStats();      //ODKOMENTOWAĆ JEŚLI UŻYWAMY STATYSTYK
+  //initializeStats();      //ODKOMENTOWAĆ JEŚLI UŻYWAMY STATYSTYK
   doStatistics(TheWorld); //J.W.
   
   //OBLICZAMY WYMAGANY ROZMIAR OKNA DLA size() 
