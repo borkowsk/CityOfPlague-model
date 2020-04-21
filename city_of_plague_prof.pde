@@ -48,7 +48,7 @@ int cwidth=3;  //DŁUGOŚĆ BOKU KOMÓRKI W WIZUALIZACJI
                //WARTOSC NADANA TU JEST TYLKO WSTĘPNA
 int STATUSHEIGH=150;//WYSOKOŚĆ PASKA STATUSU NA DOLE OKNA
 int STEPSperVIS=1;//JAK CZĘSTO URUCHAMIAMY WIZUALIZACJĘ
-int FRAMEFREQ=2; //ILE RAZY NA SEKUNDĘ URUCHAMIA SIĘ draw()
+int FRAMEFREQ=10; //ILE RAZY NA SEKUNDĘ URUCHAMIA SIĘ draw()
 
 //boolean WITH_VIDEO=false;//CZY CHCEMY ZAPIS DO PLIKU FILMOWEGO (wymagany modu… RTMVideo.pde)
 boolean simulationRun=true;//FLAGA Start/Stop DZIAŁANIA SYMULACJI
@@ -68,8 +68,8 @@ void setup()
   
   //INICJALIZACJA MODELU I (ewentualnie) STATYSTYK
   initializeModel(TheWorld);//DOKONCZENIE INICJALIZACJI ŚWIATA
-  //initializeStats();      //ODKOMENTOWAĆ JEŚLI UŻYWAMY STATYSTYK
-  //doStatistics(TheWorld); //J.W.
+  initializeStats();      //ODKOMENTOWAĆ JEŚLI UŻYWAMY STATYSTYK
+  doStatistics(TheWorld); //J.W.
   
   //OBLICZAMY WYMAGANY ROZMIAR OKNA DLA size() 
   println(modelName+": REQUIRED SIZE OF PAINTING AREA IS "
@@ -84,10 +84,10 @@ void setup()
   println("CURRENT SIZE OF PAINTING AREA IS "+width+"x"+height);//-myMenu.bounds.height???
   visualizeModel(TheWorld);//PIERWSZA PO INICJALIZACJI WIZUALIZACJA ŚWIATA
   
-  //if(!simulationRun) //WYMAGA MODUŁU RTMEvents.pde
-  //  println("PRESS 'r' or 'ESC' to start simulation");
-  //else
-  //  println("PRESS 's' or 'ESC' to pause simulation");
+  if(!simulationRun) //WYMAGA MODUŁU RTMEvents.pde
+    println("PRESS 'r' or 'ESC' to start simulation");
+  else
+    println("PRESS 's' or 'ESC' to pause simulation");
   
   //NextVideoFrame();//PIERWSZA REALNA KLATKA FILMU (o ile używamy RTMVideo.pde)
 }
