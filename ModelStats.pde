@@ -6,59 +6,37 @@ void initializeStats()
 {
   String FileName=modelName+="_"+year()+'.'+nf(month(),2)+'.'+nf(day(),2)+'.'+nf(hour(),2)+'.'+nf(minute(),2)+'.'+nf(second(),2)+'.'+millis();
   outstat=createWriter(FileName+".out");
-  outstat.println("$STEP\tAlive\t.....");//<-- complete the header fields!
+  outstat.println( "ST:\tStepCounter\tliveCount"
+                           +"\tZ\tsumInfected\tnewcases"
+                           +"\tW\tsumRecovered\tcured"
+                           +"\tU\tsumDeath\tdeaths"
+                           +"\t");
 }
-
-float meanDummy=0;
 
 void doStatistics(World world)
 {
   doStatisticsOnAgents(world.agents);
 }
 
-void doStatisticsOnAgents(Agent[] agents)
-{  
-  Agent curra;
-  double summ=0;
-  liveCount=0;
-  
-  for(int a=0;a<agents.length;a++)
-    if( (curra=agents[a]) != null )
-    {
-      //Dummy statistic
-      //summ+=curra.dummy;
-     
-      //.....THIS PART IS FOR YOU!
-      
-      liveCount++;
-    }
-  
-   outstat.println(StepCounter+"\t"+liveCount+"\t"+(summ/liveCount));
-   meanDummy=(float)(summ/liveCount);
-   
-   //outstat should be closed in exit() --> see Exit.pde
-}
-
 void doStatisticsOnAgents(Agent[][] agents)
 {  
   Agent curra;
-  double summ=0;
   liveCount=0;
   
   for(int a=0;a<agents.length;a++)
    for(int b=0;b<agents[a].length;b++)
     if( (curra=agents[a][b]) != null )
-    {
-      //Dummy statistic
-      //summ+=curra.dummy;
-     
+    {     
       //.....THIS PART IS FOR YOU!
       
       liveCount++;
     }
   
-   outstat.println(StepCounter+"\t"+liveCount+"\t"+(summ/liveCount));
-   meanDummy=(float)(summ/liveCount);
+   outstat.println( "ST:\t"+StepCounter+"\t"+liveCount
+                           +"\tZ\t"+sumInfected+"\t"+newcas.get(newcas.size()-1)
+                           +"\tW\t"+sumRecovered+"\t"+cured.get(cured.size()-1)
+                           +"\tU\t"+sumDeath+"\t"+deaths.get(deaths.size()-1)
+                           +"\t");
    
    //outstat should be closed in exit() --> see Exit.pde
 }

@@ -97,8 +97,8 @@ void draw()
   if(simulationRun)
   {
     modelStep(TheWorld);
-    //doStatistics(TheWorld);//ODKOMENTOWAĆ JEŚLI UŻYWAMY STATYSTYK
-  }                          //Używa wewnętrznej flagi określajacej czy log został otwarty
+    doStatistics(TheWorld);//ODKOMENTOWAĆ JEŚLI UŻYWAMY STATYSTYK
+  }                        //Używa wewnętrznej flagi określajacej czy log został otwarty
   
   writeStatusLine();
   
