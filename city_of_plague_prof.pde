@@ -11,7 +11,7 @@
 
 //PARAMETRY MODELU
 String modelName="ABMcity_of_plague";//NAZWA modelu, na razie nie używana.
-int side=200;//DŁUGOŚĆ BOKU ŚWIATA - PIONOWEGO. Poziomy jest x2
+int side=300;//DŁUGOŚĆ BOKU ŚWIATA - PIONOWEGO. Poziomy jest x2
 float density=0.66; //Gęstość zaludnienia na "terenach mieszkalnych"
 
 //final float PTransfer=???;  //Prawdopodobieństwo zarażenia agenta w pojedynczej interakcji
@@ -44,7 +44,7 @@ FloatList newcas=new FloatList();//Historia nowych zachorowań
 FloatList  cured=new FloatList();//Historia wyleczeń 
 
 //PARAMETRY WIZUALIZACJI, STATYSTYKI ITP.
-int cwidth=3;  //DŁUGOŚĆ BOKU KOMÓRKI W WIZUALIZACJI
+int cwidth=2;  //DŁUGOŚĆ BOKU KOMÓRKI W WIZUALIZACJI
                //WARTOSC NADANA TU JEST TYLKO WSTĘPNA
 int STATUSHEIGH=150;//WYSOKOŚĆ PASKA STATUSU NA DOLE OKNA
 int STEPSperVIS=1;//JAK CZĘSTO URUCHAMIAMY WIZUALIZACJĘ
