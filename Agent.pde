@@ -2,7 +2,7 @@
 ///////////////////////////////////////////////////////////////
 class Agent
 {
-  int   state;
+  Germ  infection;
   float immunity;//Zamiast PTransfer!
   
   //Polożenie komorek zamieszkania i pracy
@@ -13,7 +13,7 @@ class Agent
   
   Agent(int initX,int initY)//Konstruktor agenta. Inicjuje atrybuty
   {
-    state=Susceptible;
+    infection=null;
     flatX=workX=initX;
     flatY=workY=initY;//"workX|Y" mоże zostać sensowniej przypisane później
     immunity=( random(1.0)+random(1.0)+random(1.0)

@@ -7,7 +7,7 @@
 // Stąd jeden krok symulacji to pół dnia - parzyste kroki w pracy, nieparzyste w domu, chyba że agent nie ma pracy.
 //
 // Właściwości danego wirusa są opisane parametrami symulacji.
-// Właściwością agentów poza rozlosowaną z rozkładu Gaussa "immunity" jest tylko wiedza o miejscu zamieszkania i miejscu pracy.
+// Właściwością agentów poza rozlosowaną z rozkładu dwumianowego "immunity" jest tylko wiedza o miejscu zamieszkania i miejscu pracy.
 
 //PARAMETRY MODELU
 String modelName="ABMcity_of_plague";//NAZWA modelu, na razie nie używana.
@@ -16,7 +16,7 @@ float density=0.66; //Gęstość zaludnienia na "terenach mieszkalnych"
 
 //final float PTransfer=???;  //Prawdopodobieństwo zarażenia agenta w pojedynczej interakcji
                               //teraz zależy od indywidualnej wartości immunity!
-
+//TO SĄ DOMYŚLNE WŁAŚCIWOŚCI ZARAZKA!
 final float  PSLeav=0.90;     //Prawdopodobieństwo, że danego DNIA chory agent nie będzie w stanie iść do pracy                             
 final float  PDeath=0.15;     //Średnie prawdopodobieństwo śmierci w danym kroku(!) choroby. Teraz krok to 12 godzin.
 final int    Duration=14;     //Czas trwania infekcji! W krokach symulacji. Teraz krok to 12 godzin!!! Czyli default to 7 dni.
@@ -25,8 +25,7 @@ final int    Duration=14;     //Czas trwania infekcji! W krokach symulacji. Tera
 final int    Nprob=10;          //Liczba prób szukania pracy w inicjalizacji. Jak się nie uda to agent cały czas siedzi w domu
 final float  dutifulness=0.900; //Jak często zdrowi agenci idą do pracy. Mogą pracować w domu lub mieć ograniczone wychodzenie.
 
-//Stałe używane do określania stanu agentów
-final int Susceptible=1;    
+//Stałe używane do określania stanu agentów   
 final int Infected=2;
 final int Recovered=Infected+Duration;
 final int Death=100;
