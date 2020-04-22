@@ -46,8 +46,8 @@ void initializeAgents(Agent[][] agents,int[][] env)
       agents[a][b]=new Agent(b,a);//Wymusza podanie x,y położenia!
       liveCount++;
    }
-   println("Pacjent 0 at ",b,a);
-   agents[a][b].state=Infected;
+   println("Pacjent 0 @",b,"x",a);
+   agents[a][b].infection=new Virus(defPDeath,defPSLeav,defDuration);
 }
 
 void sheduleAgents(Agent[][] agents,int[][] env,int step)
@@ -58,14 +58,14 @@ void sheduleAgents(Agent[][] agents,int[][] env,int step)
     for(int b=0;b<agents[a].length;b++)
     {
      if( (curra=agents[a][b])!= null //Coś dalej do zrobienia gdy agent jest żywy
-     && curra.state!=Death       //Tego brakowało więc i duchy chodziły do pracy
+     && (curra.infection!=null?curra.infection.hostIsDead():true)      //Tylko jak chory to może być martwy! UPROSZCZENIE
      && curra.workX!=curra.flatX 
      && curra.workY!=curra.flatY)// i nie pracuje w domu!!!
      {
        
        if(step % 2 == 0 )//Jak 0 to z domu do pracy
        {
-         float workProbability=(Infected < curra.state && curra.state < Recovered) ? dutifulness * (1-PSLeav): dutifulness;
+         float workProbability= curra.isInfected() ? dutifulness * (1- curra.infection.pSickLeave): dutifulness;
          if(env[a][b]==Env_FLAT+1 //Tylko jak nadal jest w domu i zdecydował się iść
          && random(1)< workProbability 
          )
@@ -102,8 +102,8 @@ void  agentsChange(Agent[][] agents)
     int b=(int)random(0,agents[a].length);//print(a,b,' ');
     if(agents[a][b]!= null )
     {
-       //Jesli pusty lub zdrowy to nic nie robimy
-       if(agents[a][b].state<Infected || Recovered<=agents[a][b].state) continue;
+       //Jesli agent centralny pusty lub zdrowy to nic nie robimy
+       if(agents[a][b].isSusceptible() || agents[a][b].isRecovered()) continue;
        
        //Wyliczenie lokalizacji sąsiadów
        int dw=(a+1) % agents.length;   
@@ -112,38 +112,35 @@ void  agentsChange(Agent[][] agents)
        int left  = (agents[a].length+b-1) % agents[a].length;
 
        if(agents[a][left]!=null
-       && agents[a][left].state==Susceptible && random(1) < 1-agents[a][left].immunity )
-         {agents[a][left].state=Infected; sumInfected++;}
+       && agents[a][left].isSusceptible() && random(1) < 1-agents[a][left].immunity )
+         {agents[a][left].transferFrom(agents[a][b]); sumInfected++;}
         
        if(agents[a][right]!=null
-       && agents[a][right].state==Susceptible && random(1) < 1-agents[a][right].immunity )
-         {agents[a][right].state=Infected; sumInfected++;}
+       && agents[a][right].isSusceptible() && random(1) < 1-agents[a][right].immunity )
+         {agents[a][right].transferFrom(agents[a][b]); sumInfected++;}
         
        if(agents[up][b]!=null
-       && agents[up][b].state==Susceptible && random(1) < 1-agents[up][b].immunity )
-         {agents[up][b].state=Infected; sumInfected++;}
+       && agents[up][b].isSusceptible() && random(1) < 1-agents[up][b].immunity )
+         {agents[up][b].transferFrom(agents[a][b]); sumInfected++;}
         
        if(agents[dw][b]!=null
-       && agents[dw][b].state==Susceptible && random(1) < 1-agents[dw][b].immunity ) 
-         {agents[dw][b].state=Infected; sumInfected++;}
-
-       float prob=random(1);//Los na dany dzień
+       && agents[dw][b].isSusceptible() && random(1) < 1-agents[dw][b].immunity ) 
+         {agents[dw][b].transferFrom(agents[a][b]); sumInfected++;}
        
-       if(prob<PDeath) //Albo tego dnia umiera
+       if(agents[a][b].justDying()) //Albo tego dnia umiera
         { 
           sumDeath++;liveCount--;
           //agents[a][b]=null;//Można by dawać mu stan "dead", ale...
-          agents[a][b].state=Death;//Ale to trzeba uwzglednić przy statystyce!
+          //agents[a][b].state=Death;//Ale to trzeba uwzglednić przy statystyce!
         }
         else
         {
           //Albo jest wyleczony
-          if(++(agents[a][b].state)==Recovered)
+          if(agents[a][b].justHealed())
           {
               sumRecovered++;
-              //agents[a][b].immunity=1;//Dla sprawdzenia, ale demoluje ;-) wykres
           }
-          //else //NADAL CIERPI!
+          //else //ALBO NADAL CIERPI!
         }
     }
   }

@@ -17,18 +17,18 @@ float density=0.66; //Gęstość zaludnienia na "terenach mieszkalnych"
 //final float PTransfer=???;  //Prawdopodobieństwo zarażenia agenta w pojedynczej interakcji
                               //teraz zależy od indywidualnej wartości immunity!
 //TO SĄ DOMYŚLNE WŁAŚCIWOŚCI ZARAZKA!
-final float  PSLeav=0.90;     //Prawdopodobieństwo, że danego DNIA chory agent nie będzie w stanie iść do pracy                             
-final float  PDeath=0.15;     //Średnie prawdopodobieństwo śmierci w danym kroku(!) choroby. Teraz krok to 12 godzin.
-final int    Duration=14;     //Czas trwania infekcji! W krokach symulacji. Teraz krok to 12 godzin!!! Czyli default to 7 dni.
+final float  defPSLeav=0.90;//Domyślne prawdopodobieństwo, że danego DNIA chory agent nie będzie w stanie iść do pracy                             
+final float  defPDeath=0.15;//Domyślne średnie prawdopodobieństwo śmierci w danym kroku(!) choroby. Teraz krok to 12 godzin.
+final int    defDuration=14;//Domyślny czas trwania infekcji! W krokach symulacji. Teraz krok to 12 godzin!!! Czyli default to 7 dni.
 
 //Właściwości nie związane z epidemią
 final int    Nprob=10;          //Liczba prób szukania pracy w inicjalizacji. Jak się nie uda to agent cały czas siedzi w domu
 final float  dutifulness=0.900; //Jak często zdrowi agenci idą do pracy. Mogą pracować w domu lub mieć ograniczone wychodzenie.
 
 //Stałe używane do określania stanu agentów   
-final int Infected=2;
-final int Recovered=Infected+Duration;
-final int Death=100;
+final int Infected=1;
+final int Recovered=0;
+final int HostDeath=Integer.MAX_VALUE;//Ryzykowne bo w virusie jest float (TODO!)
 
 World TheWorld=new World(side);//INICJALIZACJA JEST KOŃCZONA 
                                //W FUNKCJI setup()

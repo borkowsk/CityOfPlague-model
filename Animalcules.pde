@@ -9,10 +9,11 @@ class Animalcule
 class Germ extends Animalcule
 //Klasa bazowa zarazków
 {          
-  float  pDeath=0.15;     //Średnie prawdopodobieństwo śmierci w danym kroku(!) choroby. Teraz krok to 12 godzin.
-  float  pSickLeave=0.90; //Prawdopodobieństwo, że danego DNIA chory agent nie będzie w stanie iść do pracy   
+  float  pDeath=0.0;      //Średnie prawdopodobieństwo śmierci w danym kroku(!) choroby. Teraz krok to 12 godzin.
+  float  pSickLeave=0.09; //Prawdopodobieństwo, że danego DNIA chory agent nie będzie w stanie iść do pracy   
   int    duration=14;     //Czas trwania infekcji! W krokach symulacji. Teraz krok to 12 godzin!!! Czyli default to 7 dni.
                           //W modelu profesjonalnym czas powinien być raczej w godzinach
+  boolean hostIsDead() { return false;} //Domyślnie nigdy nie umiera bo to KATAR
 }
 
 class Virus extends Germ
@@ -30,5 +31,10 @@ class Virus extends Germ
   Virus clone()//Nowy wirus do zaatakowanie innego agenta
   {
     return new Virus(pDeath,pSickLeave,duration);
+  }
+  
+  boolean hostIsDead() 
+  { 
+    return state>=HostDeath;//Jak już przekroczymy miano krytyczne
   }
 }
