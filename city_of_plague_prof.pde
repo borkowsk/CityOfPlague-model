@@ -19,12 +19,12 @@ float density=0.66; //Gęstość zaludnienia na "terenach mieszkalnych"
 //TO SĄ DOMYŚLNE WŁAŚCIWOŚCI ZARAZKA!
 final float  defPSLeav=0.90;//Domyślne prawdopodobieństwo, że danego DNIA chory agent nie będzie w stanie iść do pracy                             
 final float  defPDeath=0.15;//Domyślne średnie prawdopodobieństwo śmierci w danym kroku(!) choroby. Teraz krok to 12 godzin.
-final int    defDuration=14;//Domyślny czas trwania infekcji! W krokach symulacji. Teraz krok to 12 godzin!!! Czyli default to 7 dni.
+final int    defDuration=14; //Domyślny czas trwania infekcji! W krokach symulacji. Teraz krok to 12 godzin!!! Czyli default to 7 dni.
 
 //Właściwości nie związane z epidemią
 final int    Nprob=10;          //Liczba prób szukania pracy w inicjalizacji. Jak się nie uda to agent cały czas siedzi w domu
 final float  dutifulness=0.900; //Jak często zdrowi agenci idą do pracy. Mogą pracować w domu lub mieć ograniczone wychodzenie.
-
+                               //Ale lockdown nigdy nie jest kompletny (RACZEJ?)
 //Stałe używane do określania stanu agentów   
 final int Infected=1;
 final int Recovered=0;
@@ -35,9 +35,11 @@ World TheWorld=new World(side);//INICJALIZACJA JEST KOŃCZONA
 
 //STATYSTYKI LICZONE W TRAKCIE SYMULACJI
 int liveCount=0;
+
 int sumInfected=0;//Zachorowanie
 int sumRecovered=0;//Wyzdrowienia
 int sumDeath=0;//Ci co umarli
+
 FloatList deaths=new FloatList();//Historia śmierci 
 FloatList newcas=new FloatList();//Historia nowych zachorowań
 FloatList  cured=new FloatList();//Historia wyleczeń 
@@ -47,7 +49,7 @@ int cwidth=2;  //DŁUGOŚĆ BOKU KOMÓRKI W WIZUALIZACJI
                //WARTOSC NADANA TU JEST TYLKO WSTĘPNA
 int STATUSHEIGH=150;//WYSOKOŚĆ PASKA STATUSU NA DOLE OKNA
 int STEPSperVIS=1;//JAK CZĘSTO URUCHAMIAMY WIZUALIZACJĘ
-int FRAMEFREQ=10; //ILE RAZY NA SEKUNDĘ URUCHAMIA SIĘ draw()
+int FRAMEFREQ=5; //ILE RAZY NA SEKUNDĘ URUCHAMIA SIĘ draw()
 
 //boolean WITH_VIDEO=false;//CZY CHCEMY ZAPIS DO PLIKU FILMOWEGO (wymagany modu… RTMVideo.pde)
 boolean simulationRun=true;//FLAGA Start/Stop DZIAŁANIA SYMULACJI
@@ -63,7 +65,7 @@ void setup()
   frameRate(FRAMEFREQ);
   background(255,255,200);
   strokeWeight(2);
-  //randomSeed(-1013);//Zasianie generatora gdy chcemy mieć powtarzalny przebieg np. 107 albo 1013
+  //randomSeed(-1033);//Zasianie generatora gdy chcemy mieć powtarzalny przebieg np. 107 albo 1013
   
   //INICJALIZACJA MODELU I (ewentualnie) STATYSTYK
   initializeModel(TheWorld);//DOKONCZENIE INICJALIZACJI ŚWIATA

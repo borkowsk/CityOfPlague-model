@@ -43,7 +43,7 @@ void initializeAgents(Agent[][] agents,int[][] env)
    int b=int(random(agents[0].length/3));
    if(agents[a][b]==null)//Gdyby go nie było
    {
-      agents[a][b]=new Agent(b,a);//Wymusza podanie x,y położenia!
+      agents[a][b]=new Agent(b,a);//Konstruktor wymusza podanie x,y położenia!
       liveCount++;
    }
    println("Pacjent 0 @",b,"x",a);
@@ -58,19 +58,23 @@ void sheduleAgents(Agent[][] agents,int[][] env,int step)
     for(int b=0;b<agents[a].length;b++)
     {
      if( (curra=agents[a][b])!= null //Coś dalej do zrobienia gdy agent jest żywy
-     && (curra.infection!=null?curra.infection.hostIsDead():true)      //Tylko jak chory to może być martwy! UPROSZCZENIE
+     && curra.isAlive()              //Tylko żywy może iść do pracy
      && curra.workX!=curra.flatX 
-     && curra.workY!=curra.flatY)// i nie pracuje w domu!!!
+     && curra.workY!=curra.flatY)    //o ile nie pracuje w domu!!!
      {
        
        if(step % 2 == 0 )//Jak 0 to z domu do pracy
-       {
-         float workProbability= curra.isInfected() ? dutifulness * (1- curra.infection.pSickLeave): dutifulness;
+       { 
+         float workProbability=dutifulness;
+         if(curra.isInfected())
+           workProbability*=1 - curra.infection.pSickLeave;   
+
+         //println(workProbability);//DEBUG
+         
          if(env[a][b]==Env_FLAT+1 //Tylko jak nadal jest w domu i zdecydował się iść
          && random(1)< workProbability 
          )
-         {
-           //print("*");
+         { //print("*");//DEBUG
            agents[a][b]=null;//A z domu znika
            agents[curra.workY][curra.workX]=curra;//Agent teleportuje się do pracy
          }
@@ -78,8 +82,7 @@ void sheduleAgents(Agent[][] agents,int[][] env,int step)
        else// jak 1 to z pracy do domu
        {
          if(env[a][b]==Env_WORK+1)//Tylko jak nadal jest w pracy to z niej wraca
-         {
-           //print("!");
+         { //print("!");//DEBUG
            agents[a][b]=null;//A z pracy znika
            agents[curra.flatY][curra.flatX]=curra;//Agent teleportuje się do domu
          }
@@ -100,10 +103,11 @@ void  agentsChange(Agent[][] agents)
   {
     int a=(int)random(0,agents.length);//agents[a].lenght na wypadek gdyby nam przyszło do głowy zrobić prostokąt
     int b=(int)random(0,agents[a].length);//print(a,b,' ');
+    
     if(agents[a][b]!= null )
     {
-       //Jesli agent centralny pusty lub zdrowy to nic nie robimy
-       if(agents[a][b].isSusceptible() || agents[a][b].isRecovered()) continue;
+       //Jesli agent centralny zmarły lub zdrowy to nie zaraża wiec nic nie robimy
+       if(!agents[a][b].isAlive() || agents[a][b].isSusceptible() || agents[a][b].isRecovered()) continue;
        
        //Wyliczenie lokalizacji sąsiadów
        int dw=(a+1) % agents.length;   

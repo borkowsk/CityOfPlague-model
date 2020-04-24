@@ -35,7 +35,8 @@ class Agent
   boolean isInfected()
   {
     if(infection==null) return false;
-    return infection.state!=Recovered && Infected<infection.state;//<=
+    assert infection.state!=HostDeath : "Nie można być martwy!";
+    return infection.state!=Recovered && Infected<=infection.state;//<=
   }  
   
   //float   hasIllness() //Jakby zarażał od wyższego progu?
@@ -54,6 +55,8 @@ class Agent
   {
     if(infection==null) 
         return false;//Nie ma na co umrzeć
+        
+    assert infection.state!=HostDeath : "Nie można umrzeć więcej niż raz!";
     
     if(infection.state==Recovered)
         return false;
@@ -73,8 +76,9 @@ class Agent
     assert !isSusceptible() : "Agent musi mieć zarazek!";
     assert !isRecovered()   : "Agent nie może być już wyleczony!";
     
-    if(++(infection.state)==Recovered)
+    if(++(infection.state)==infection.duration)
     {
+      infection.state=Recovered;
       return true;
     }
     else
