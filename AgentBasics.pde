@@ -32,10 +32,9 @@ void initializeAgents(Agent[][] agents,int[][] env)
           {
             curr.workX=curr.flatX;
             curr.workY=curr.flatY;
-          }
-          
-          agents[a][b]=curr;
+          } 
         }
+        agents[a][b]=curr;
       }
       
    //Inicjowanie infekcji z pozycji losowej
@@ -67,14 +66,12 @@ void sheduleAgents(Agent[][] agents,int[][] env,int step)
        { 
          float workProbability=dutifulness;
          if(curra.isInfected())
-           workProbability*=1 - curra.infection.pSickLeave;   
-
-         //println(workProbability);//DEBUG
+           workProbability*=1 - curra.infection.pSickLeave;//println(workProbability);//DEBUG
          
          if(env[a][b]==Env_FLAT+1 //Tylko jak nadal jest w domu i zdecydował się iść
          && random(1)< workProbability 
          )
-         { //print("*");//DEBUG
+         { 
            agents[a][b]=null;//A z domu znika
            agents[curra.workY][curra.workX]=curra;//Agent teleportuje się do pracy
          }
@@ -82,13 +79,13 @@ void sheduleAgents(Agent[][] agents,int[][] env,int step)
        else// jak 1 to z pracy do domu
        {
          if(env[a][b]==Env_WORK+1)//Tylko jak nadal jest w pracy to z niej wraca
-         { //print("!");//DEBUG
+         { 
            agents[a][b]=null;//A z pracy znika
            agents[curra.flatY][curra.flatX]=curra;//Agent teleportuje się do domu
          }
        }
      }
-    } 
+   } 
 }
 
 void  agentsChange(Agent[][] agents)
