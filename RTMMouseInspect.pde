@@ -38,8 +38,10 @@ void mouseClicked()
     if((selected=TheWorld.agents[selectedY][selectedX])!=null)
     {
       println("Cell",selectedX,selectedY,"belong to",selected);
-      println("\t"+selected.fullInfo("\n\t"));
       println("Env. value:",TheWorld.env[selectedY][selectedX]);
+      println("\t"+selected.fullInfo("\n\t"));
+      if(selected.infection!=null)
+          println("\t\t"+selected.infection.fullInfo("\n\t\t"));  
     }
     else
     {

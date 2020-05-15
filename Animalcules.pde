@@ -14,6 +14,13 @@ class Germ extends Animalcule
   int    duration=14;     //Czas trwania infekcji! W krokach symulacji. Teraz krok to 12 godzin!!! Czyli default to 7 dni.
                           //W modelu profesjonalnym czas powinien być raczej w godzinach
   boolean hostIsDead() { return false;} //Domyślnie nigdy nie umiera bo to KATAR
+  
+  String fullInfo(String fieldSeparator)
+  {
+    return "pDeath: "+pDeath+fieldSeparator+
+           "pSickLeave: "+pSickLeave+fieldSeparator+
+           "duration: "+pDeath+fieldSeparator;
+  }
 }
 
 class Virus extends Germ
@@ -36,5 +43,10 @@ class Virus extends Germ
   boolean hostIsDead() 
   { 
     return state>=HostDeath;//Jak już przekroczymy miano krytyczne
+  }
+  
+  String fullInfo(String fieldSeparator)
+  {
+    return super.fullInfo(fieldSeparator)+"State: "+state+fieldSeparator;
   }
 }
