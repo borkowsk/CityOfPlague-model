@@ -130,10 +130,11 @@ void writeStatusLine()
   fill(128);noStroke();
   textAlign(RIGHT, TOP);
   text("Żyją:"+liveCount+" Zachorowali:"+sumInfected+" Wyzdrowieli:"+sumRecovered+" Umarli:"+sumDeath+"     ",width,side*cwidth);//Miejce dla NAJWAŻNIEJSZYCH STATYSTYK
-  println("ST:"+StepCounter+"\tZ\t"+sumInfected+"\t"+newcas.get(newcas.size()-1)
-                           +"\tW\t"+sumRecovered+"\t"+cured.get(cured.size()-1)
-                           +"\tU\t"+sumDeath+"\t"+deaths.get(deaths.size()-1)
-                           +"\t");
+  if(simulationRun) 
+    println("ST:"+StepCounter+"\tZ\t"+sumInfected+"\t"+newcas.get(newcas.size()-1)
+                             +"\tW\t"+sumRecovered+"\t"+cured.get(cured.size()-1)
+                             +"\tU\t"+sumDeath+"\t"+deaths.get(deaths.size()-1)
+                             +"\t");
   textAlign(LEFT, BOTTOM);
   text(StepCounter+")  Fps:"+ frameRate,0,side*cwidth+STATUSHEIGH-2);
 }

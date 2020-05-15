@@ -21,6 +21,14 @@ class Agent
              //random(1.0);//Srednia taka sama, ale rozkład płaski
   }
   
+  String fullInfo(String fieldSeparator)
+  {
+    return "Immunity: "+immunity+fieldSeparator+
+           "Flat at "+flatX+","+flatY+fieldSeparator+
+           "Work at "+workX+","+workY+fieldSeparator+
+           "Infected: "+infection;
+  }
+  
   boolean isAlive()
   {
     if(isSusceptible()) return true;
