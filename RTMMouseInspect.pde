@@ -39,9 +39,9 @@ void mouseClicked()
     {
       println("Cell",selectedX,selectedY,"belong to",selected);
       println("Env. value:",TheWorld.env[selectedY][selectedX]);
-      println("\t"+selected.fullInfo("\n\t"));
+      println("\t"+selected.fullInfo(";\n\t"));
       if(selected.infection!=null)
-          println("\t\t"+selected.infection.fullInfo("\n\t\t"));  
+          println("\t\t"+selected.infection.fullInfo(";\n\t\t"));  
     }
     else
     {
