@@ -42,7 +42,7 @@ void visualizeAgents(Agent[][] agents)
         { 
         case Recovered:  fill(0,128,0);break;//Już przeszedł. Wyleczony!
         case Infected:   fill(0,255,255);break;//Właśnie zachorował
-        case HostDeath:  fill(0);break;//Zmarły
+        case HostDeath:  fill(255,0,0);break;//Zmarły
         default:         fill(random(255),green,random(255));//Chory
         break;
         } 

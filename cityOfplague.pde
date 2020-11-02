@@ -24,7 +24,9 @@ final int    defDuration=14; //Domyślny czas trwania infekcji! W krokach symula
 //Właściwości nie związane z epidemią
 final int    Nprob=10;          //Liczba prób szukania pracy w inicjalizacji. Jak się nie uda to agent cały czas siedzi w domu
 final float  dutifulness=0.900; //Jak często zdrowi agenci idą do pracy. Mogą pracować w domu lub mieć ograniczone wychodzenie.
-                               //Ale lockdown nigdy nie jest kompletny (RACZEJ?)
+final float  lockdownness=0.20; //Ale lockdown nigdy nie jest kompletny (RACZEJ?)
+final int    lockdownstep=50; //W którym kroku symulacji (2 kroki na dzień) wprowadzamy lockdown
+
 //Stałe używane do określania stanu agentów   
 final int Infected=1;
 final int Recovered=0;
@@ -51,7 +53,7 @@ int STATUSHEIGH=150;//WYSOKOŚĆ PASKA STATUSU NA DOLE OKNA
 int STEPSperVIS=1;//JAK CZĘSTO URUCHAMIAMY WIZUALIZACJĘ
 int FRAMEFREQ=5; //ILE RAZY NA SEKUNDĘ URUCHAMIA SIĘ draw()
 
-//boolean WITH_VIDEO=false;//CZY CHCEMY ZAPIS DO PLIKU FILMOWEGO (wymagany modu… RTMVideo.pde)
+boolean WITH_VIDEO=true;//CZY CHCEMY ZAPIS DO PLIKU FILMOWEGO (wymagany modu… RTMVideo.pde)
 boolean simulationRun=true;//FLAGA Start/Stop DZIAŁANIA SYMULACJI
 
 void setup()
@@ -79,18 +81,19 @@ void setup()
   cwidth=(height-STATUSHEIGH)/side;//DOPASOWUJEMY ROZMIAR KOMÓREK DO OKNA JAKIE JEST
   
   //INICJALIZACJA ZAPISU FILMU  (jeśli używamy RTMVideo.pde)
-  //if(WITH_VIDEO) {initVideoExport(this,modelName+".mp4",FRAMEFREQ);FirstVideoFrame();}
+  if(WITH_VIDEO) {initVideoExport(this,modelName+".mp4",FRAMEFREQ);}
   
   //INFORMACJE KONSOLOWE NA KONIEC FUNKCJI setup()
   println("CURRENT SIZE OF PAINTING AREA IS "+width+"x"+height);//-myMenu.bounds.height???
   visualizeModel(TheWorld);//PIERWSZA PO INICJALIZACJI WIZUALIZACJA ŚWIATA
+  FirstVideoFrame();
   
   if(!simulationRun) //WYMAGA MODUŁU RTMEvents.pde
     println("PRESS 'r' or 'ESC' to start simulation");
   else
     println("PRESS 's' or 'ESC' to pause simulation");
   
-  //NextVideoFrame();//PIERWSZA REALNA KLATKA FILMU (o ile używamy RTMVideo.pde)
+  NextVideoFrame();//PIERWSZA REALNA KLATKA FILMU (o ile używamy RTMVideo.pde)
 }
 
 void draw()
@@ -107,8 +110,8 @@ void draw()
   || StepCounter % STEPSperVIS == 0 ) //But when model is running, visualisation should be done from time to time
   {
     visualizeModel(TheWorld);
-    //NextVideoFrame();//FUNKCJA ZAPISU KLATKI FILMU. 
-  }                    //Używa wewnętrznej flagi określajacej czy film został otwarty
+    NextVideoFrame();//FUNKCJA ZAPISU KLATKI FILMU. 
+  }                  //Używa wewnętrznej flagi określajacej czy film został otwarty
 
 }
 
@@ -127,16 +130,20 @@ void writeStatusLine()
   stroke(0,0,255);fill(0,0,255);
   timeline(newcas,deaths,cured, 200,height,STATUSHEIGH-16,false,color(0,0,255),color(255,0,0),color(0,255,0));
   
-  fill(128);noStroke();
+  fill(128);noStroke();//Miejce dla NAJWAŻNIEJSZYCH STATYSTYK
   textAlign(RIGHT, TOP);
-  text("Żyją:"+liveCount+" Zachorowali:"+sumInfected+" Wyzdrowieli:"+sumRecovered+" Umarli:"+sumDeath+"     ",width,side*cwidth);//Miejce dla NAJWAŻNIEJSZYCH STATYSTYK
+  text("Żyją:"+liveCount+" Zachorowali:"+sumInfected+" Wyzdrowieli:"+sumRecovered+" Umarli:_____________",width,side*cwidth);
+  fill(255,0,0);
+  text(" "+sumDeath+" ",width,side*cwidth);
+  
   if(simulationRun) 
-    println("ST:"+StepCounter+"\tZ\t"+sumInfected+"\t"+newcas.get(newcas.size()-1)
+    println("ST:"+(StepCounter/2.0)+"\tZ\t"+sumInfected+"\t"+newcas.get(newcas.size()-1)
                              +"\tW\t"+sumRecovered+"\t"+cured.get(cured.size()-1)
                              +"\tU\t"+sumDeath+"\t"+deaths.get(deaths.size()-1)
-                             +"\t");
-  textAlign(LEFT, BOTTOM);
-  text(StepCounter+")  Fps:"+ frameRate,0,side*cwidth+STATUSHEIGH-2);
+                             +"\t Fps:\t"+ frameRate);
+                             
+  textAlign(LEFT, BOTTOM);fill(255);
+  text("Day:"+(StepCounter/2.0)+" "+(lockdownstep<StepCounter?"LOCKDOWN:"+((1.0-lockdownness)*100)+"%":""),0,height); //Ale lockdown nigdy nie jest kompletny (RACZEJ?)
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////

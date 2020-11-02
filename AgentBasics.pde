@@ -52,6 +52,10 @@ void initializeAgents(Agent[][] agents,int[][] env)
 void sheduleAgents(Agent[][] agents,int[][] env,int step)
 //Njaprostrze przemieszczanie agentów sterowane upływem czasu symulacji
 {
+   //lockdownness=0.20; //Ale lockdown nigdy nie jest kompletny (RACZEJ?)
+   //lockdownstep=100;  //W którym kroku symulacji wprowadzamy lockdown
+   float WP=(StepCounter<lockdownstep?dutifulness:lockdownness);
+         
    Agent curra; //println("Parzysty: ",step%2==0);
    for(int a=0;a<agents.length;a++)
     for(int b=0;b<agents[a].length;b++)
@@ -64,12 +68,13 @@ void sheduleAgents(Agent[][] agents,int[][] env,int step)
        
        if(step % 2 == 0 )//Jak 0 to z domu do pracy
        { 
-         float workProbability=dutifulness;
+         float workProbability=WP;
          if(curra.isInfected())
            workProbability*=1 - curra.infection.pSickLeave;//println(workProbability);//DEBUG
+
          
          if(env[a][b]==Env_FLAT+1 //Tylko jak nadal jest w domu i zdecydował się iść
-         && random(1)< workProbability 
+         && random(1)< workProbability
          )
          { 
            agents[a][b]=null;//A z domu znika
