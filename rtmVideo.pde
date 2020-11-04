@@ -57,6 +57,7 @@ void CloseVideo() //To wołamy gdy chcemy zamknąć
        fill(random(255),random(255),random(255));
        text("2020 (c) W.Borkowski @ Institute for Social Studies, University of Warsaw",1,height);
        videoExport.saveFrame();//Video frame
+       print("*");//DEBUG
    }
    videoExport.saveFrame();//Video frame - LAST
    videoExport.endMovie();//Koniec filma

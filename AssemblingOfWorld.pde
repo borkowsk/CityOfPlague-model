@@ -34,8 +34,15 @@ void visualizeModel(World world)
 void modelStep(World world)
 {
    //environmentChange(world.env);//W tej symulacji niepotrzebne
-   agentsChange(world.agents);//TU NASTĄPI WYBÓR FUNKCJI PRZECIĄŻONEJ!
-   sheduleAgents(world.agents,world.env,StepCounter);
+   agentsChange(world.agents);
+   if(protestStep==StepCounter)
+   {
+       sheduleProtest(world.agents,world.env,0.1);
+       visualizeModel(TheWorld);//DLA PEWNOŚCI, ŻEBY PROTEST ZAWSZE BYŁ WIDOCZNY CHOCIAŻ NA FILMIE
+       NextVideoFrame();//FUNKCJA ZAPISU KLATKI FILMU. 
+   }
+   else
+       sheduleAgents(world.agents,world.env,StepCounter);
    StepCounter++;
 }
 

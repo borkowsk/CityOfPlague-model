@@ -49,44 +49,94 @@ void initializeAgents(Agent[][] agents,int[][] env)
    agents[a][b].infection=new Virus(defPDeath,defPSLeav,defDuration);
 }
 
+void sheduleProtest(Agent[][] agents,int[][] env,float participationProb)
+//Generuje protest o rozmiarze participationProb na głównej alei (oczywiście z żywych agentów)
+{        
+   Agent curra; 
+   for(int a=0;a<agents.length;a++)
+    for(int b=0;b<agents[a].length;b++)
+    {
+     if( (curra=agents[a][b])!= null //gdy agent jest żywy
+     && curra.isAlive() 
+     && participationProb>random(0,1)) //to może iść na protest
+     {
+       boolean OK=false;
+       int na=a;
+       int nb=agents[a].length/2;
+       agents[a][b]=null; //znika z aktualnego miejsca
+       do{
+        //print(na,nb,','); 
+        if(agents[na][nb]==null
+        && 
+           env[na][nb]==Env_ROAD)
+        {
+          agents[na][nb]=curra;
+          OK=true;
+          println();
+        }
+        else
+        {
+          na+=random(1)<0.5?-1:1;
+          if(na<0) na=0;
+          if(agents.length<=na) na=agents.length-1;
+          
+          nb+=random(1)<0.5?-1:1;
+          if(nb<0) nb=0;
+          if(agents[na].length<=nb) nb=agents[na].length-1;
+        }
+       }while(!OK);
+     }
+    }
+   println("PROTEST STARTED"); //<>//
+}
+
 void sheduleAgents(Agent[][] agents,int[][] env,int step)
-//Njaprostrze przemieszczanie agentów sterowane upływem czasu symulacji
+//Najprostrze przemieszczanie agentów sterowane upływem czasu symulacji
 {
    //lockdownness=0.20; //Ale lockdown nigdy nie jest kompletny (RACZEJ?)
    //lockdownstep=100;  //W którym kroku symulacji wprowadzamy lockdown
-   float WP=(StepCounter<lockdownstep?dutifulness:lockdownness);
+   float WP=(StepCounter<lockdownStep?dutifulness:lockdownness);
          
    Agent curra; //println("Parzysty: ",step%2==0);
    for(int a=0;a<agents.length;a++)
     for(int b=0;b<agents[a].length;b++)
     {
      if( (curra=agents[a][b])!= null //Coś dalej do zrobienia gdy agent jest żywy
-     && curra.isAlive()              //Tylko żywy może iść do pracy
-     && curra.workX!=curra.flatX 
-     && curra.workY!=curra.flatY)    //o ile nie pracuje w domu!!!
+     && curra.isAlive()    )         //Tylko żywy może coś ze sobą zrobić np. do pracy
      {
-       
-       if(step % 2 == 0 )//Jak 0 to z domu do pracy
-       { 
-         float workProbability=WP;
-         if(curra.isInfected())
-           workProbability*=1 - curra.infection.pSickLeave;//println(workProbability);//DEBUG
-
-         
-         if(env[a][b]==Env_FLAT+1 //Tylko jak nadal jest w domu i zdecydował się iść
-         && random(1)< workProbability
-         )
-         { 
-           agents[a][b]=null;//A z domu znika
-           agents[curra.workY][curra.workX]=curra;//Agent teleportuje się do pracy
-         }
-       }
-       else// jak 1 to z pracy do domu
+       if(env[a][b]==Env_ROAD) //Jeśli jest na ulicy to wraca do domu!
        {
-         if(env[a][b]==Env_WORK+1)//Tylko jak nadal jest w pracy to z niej wraca
+         agents[a][b]=null;//Z ulicy agent znika
+         agents[curra.flatY][curra.flatX]=curra;//teleportuje się do domu
+         continue;
+       }
+       
+       if( curra.workX!=curra.flatX 
+       && curra.workY!=curra.flatY)    //o ile nie pracuje w domu!!!
+       {
+         
+         if(step % 2 == 0 )//Jak 0 to z domu do pracy
          { 
-           agents[a][b]=null;//A z pracy znika
-           agents[curra.flatY][curra.flatX]=curra;//Agent teleportuje się do domu
+           float workProbability=WP;
+           if(curra.isInfected())
+             workProbability*=1 - curra.infection.pSickLeave;//println(workProbability);//DEBUG
+  
+           
+           if(env[a][b]==Env_FLAT+1 //Tylko jak nadal jest w domu i zdecydował się iść
+           && random(1)< workProbability
+           )
+           { 
+             agents[a][b]=null;//A z domu znika
+             agents[curra.workY][curra.workX]=curra;//Agent teleportuje się do pracy
+           }
+         }
+         else// jak 1 to z pracy do domu
+         {
+           if(env[a][b]==Env_WORK+1)//Tylko jak nadal jest w pracy to z niej wraca
+           { 
+             agents[a][b]=null;//A z pracy znika
+             agents[curra.flatY][curra.flatX]=curra;//Agent teleportuje się do domu
+           }
          }
        }
      }

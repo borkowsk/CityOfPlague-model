@@ -11,6 +11,8 @@
 
 //PARAMETRY MODELU
 String modelName="ABMcity_of_plague";//NAZWA modelu, na razie nie używana.
+int RANDSEED=-1033;
+
 int side=300;//DŁUGOŚĆ BOKU ŚWIATA - PIONOWEGO. Poziomy jest x2
 float density=0.66; //Gęstość zaludnienia na "terenach mieszkalnych"
 
@@ -25,7 +27,8 @@ final int    defDuration=14; //Domyślny czas trwania infekcji! W krokach symula
 final int    Nprob=10;          //Liczba prób szukania pracy w inicjalizacji. Jak się nie uda to agent cały czas siedzi w domu
 final float  dutifulness=0.900; //Jak często zdrowi agenci idą do pracy. Mogą pracować w domu lub mieć ograniczone wychodzenie.
 final float  lockdownness=0.20; //Ale lockdown nigdy nie jest kompletny (RACZEJ?)
-final int    lockdownstep=50; //W którym kroku symulacji (2 kroki na dzień) wprowadzamy lockdown
+final int    lockdownStep=20; //W którym kroku symulacji (2 kroki na dzień) wprowadzamy lockdown
+final int    protestStep=40;
 
 //Stałe używane do określania stanu agentów   
 final int Infected=1;
@@ -51,7 +54,7 @@ int cwidth=2;  //DŁUGOŚĆ BOKU KOMÓRKI W WIZUALIZACJI
                //WARTOSC NADANA TU JEST TYLKO WSTĘPNA
 int STATUSHEIGH=150;//WYSOKOŚĆ PASKA STATUSU NA DOLE OKNA
 int STEPSperVIS=1;//JAK CZĘSTO URUCHAMIAMY WIZUALIZACJĘ
-int FRAMEFREQ=5; //ILE RAZY NA SEKUNDĘ URUCHAMIA SIĘ draw()
+int FRAMEFREQ=4; //ILE RAZY NA SEKUNDĘ URUCHAMIA SIĘ draw()
 
 boolean WITH_VIDEO=true;//CZY CHCEMY ZAPIS DO PLIKU FILMOWEGO (wymagany modu… RTMVideo.pde)
 boolean simulationRun=true;//FLAGA Start/Stop DZIAŁANIA SYMULACJI
@@ -67,7 +70,8 @@ void setup()
   frameRate(FRAMEFREQ);
   background(255,255,200);
   strokeWeight(2);
-  //randomSeed(-1033);//Zasianie generatora gdy chcemy mieć powtarzalny przebieg np. 107 albo 1013
+  if(RANDSEED!=0)
+      randomSeed(RANDSEED);//Zasianie generatora gdy chcemy mieć powtarzalny przebieg
   
   //INICJALIZACJA MODELU I (ewentualnie) STATYSTYK
   initializeModel(TheWorld);//DOKONCZENIE INICJALIZACJI ŚWIATA
@@ -143,7 +147,7 @@ void writeStatusLine()
                              +"\t Fps:\t"+ frameRate);
                              
   textAlign(LEFT, BOTTOM);fill(255);
-  text("Day:"+(StepCounter/2.0)+" "+(lockdownstep<StepCounter?"LOCKDOWN:"+((1.0-lockdownness)*100)+"%":""),0,height); //Ale lockdown nigdy nie jest kompletny (RACZEJ?)
+  text("Day:"+(StepCounter/2.0)+" "+(lockdownStep<StepCounter?"LOCKDOWN:"+((1.0-lockdownness)*100)+"%":""),0,height); //Ale lockdown nigdy nie jest kompletny (RACZEJ?)
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////
