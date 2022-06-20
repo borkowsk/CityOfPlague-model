@@ -1,19 +1,21 @@
-// Różne żyjątka, które mogę szkodzić agentom
-//////////////////////////////////////////////////////
+/// Zarazki czyli różne "żyjątka", które mogę szkodzić agentom
+//*/////////////////////////////////////////////////////////////
 
+/// Klasa bazowa wszelkich "żyjątek"
 class Animalcule
-//Klasa bazowa
 {
-}
+}//_endOfClass
 
+/// Klasa bazowa zarazków
 class Germ extends Animalcule
-//Klasa bazowa zarazków
 {          
-  float  pDeath=0.0;      //Średnie prawdopodobieństwo śmierci w danym kroku(!) choroby. Teraz krok to 12 godzin.
-  float  pSickLeave=0.09; //Prawdopodobieństwo, że danego DNIA chory agent nie będzie w stanie iść do pracy   
-  int    duration=14;     //Czas trwania infekcji! W krokach symulacji. Teraz krok to 12 godzin!!! Czyli default to 7 dni.
-                          //W modelu profesjonalnym czas powinien być raczej w godzinach
-  boolean hostIsDead() { return false;} //Domyślnie nigdy nie umiera bo to KATAR
+  float  pDeath=0.0;      //!< Średnie prawdopodobieństwo śmierci w danym kroku(!) choroby. Teraz krok to 12 godzin.
+  float  pSickLeave=0.09; //!< Prawdopodobieństwo, że danego DNIA chory agent nie będzie w stanie iść do pracy   
+  int    duration=14;     //!< Czas trwania infekcji (w krokach symulacji). Teraz krok to 12 godzin!!! Czyli default to 7 dni.
+                          //!< W modelu profesjonalnym czas powinien być raczej w godzinach
+                         
+  /// Czy zarazek już zabił żywicela?                        
+  boolean hostIsDead() { return false;} //!< Domyślnie nigdy nie umiera bo to KATAR
   
   String fullInfo(String fieldSeparator)
   {
@@ -21,32 +23,41 @@ class Germ extends Animalcule
            "pSickLeave: "+pSickLeave+fieldSeparator+
            "duration: "+pDeath+fieldSeparator;
   }
-}
+}//_endOfClass
 
+/// Klasa bazowa wszelkich wirusów
 class Virus extends Germ
-//Klasa bazowa wirusów
 {
-  float state;//"Miano" wirusów/stadium infekcji
-  Virus(float iPDeath,float iPSickLeave,int iDuration)//Na razie wciąż ten bardzo uproszczony model
+  float state; //!< "Miano" wirusów/stadium infekcji
+  
+  /// Konstruktor wirusa. Na razie wciąż ten bardzo uproszczony model
+  Virus(float iPDeath,float iPSickLeave,int iDuration)
   {
     pDeath=iPDeath;
     pSickLeave=iPSickLeave;
     duration=iDuration;
-    state=1;//Stan początkowy - iniekcja wirusa
+    state=1; //Stan początkowy - iniekcja wirusa
   }
   
-  Virus clone()//Nowy wirus do zaatakowanie innego agenta
+  /// Nowy wirus do zaatakowanie innego agenta. Mogłby ulec jakimś mutacjom.
+  Virus clone()
   {
     return new Virus(pDeath,pSickLeave,duration);
   }
   
+  /// Czy już przekroczono miano krytyczne wirusa, które zabija żywiciela?
   boolean hostIsDead() 
   { 
-    return state>=HostDeath;//Jak już przekroczymy miano krytyczne
+    return state>=HostDeath;
   }
   
+  /// Informacja o zarazku
   String fullInfo(String fieldSeparator)
   {
     return super.fullInfo(fieldSeparator)+"State: "+state+fieldSeparator;
   }
-}
+}//_endOfClass
+
+//*/////////////////////////////////////////////////////////////////////////////////////////
+//  https://www.researchgate.net/profile/WOJCIECH_BORKOWSKI - City of Plague
+//*/////////////////////////////////////////////////////////////////////////////////////////

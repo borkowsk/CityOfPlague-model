@@ -1,21 +1,21 @@
-// Agent is a one of two central class of each ABM model
-// Agent need to be initialised & they need logic of change 
-///////////////////////////////////////////////////////////////
+/// Agent is a one of two central class of each ABM model
+/// Agent need to be initialised & they need logic of change 
+//*/////////////////////////////////////////////////////////////
 
+/// Funkcja umieszcza agentów w domach i szuka im pracy
 void initializeAgents(Agent[][] agents,int[][] env)
 {
-   //Umieszczamy agentow w domach i szukamy im pracy
-   for(int a=0;a<agents.length;a++)//po Y
-    for(int b=0;b<agents[a].length;b++)//po X
-      if(env[a][b]==Env_FLAT && random(1)<density)//Tylko w obszarach mieszkalnych
+   for(int a=0;a<agents.length;a++) //po Y
+    for(int b=0;b<agents[a].length;b++) //po X
+      if(env[a][b]==Env_FLAT && random(1)<density) //Tylko w obszarach mieszkalnych
       {
         Agent curr=new Agent(b,a);
         liveCount++;
         
-        //DODATKOWY KOD INICJALIZACJI AGENTÓW
-        env[a][b]|=1;//Zaznaczamy mieszkanie jako zajęte
+        // DODATKOWY KOD INICJALIZACJI AGENTÓW
+        env[a][b]|=1; //Zaznaczamy mieszkanie jako zajęte
         
-        //Kazdemu agentowi dajemy N szans znalezienia miejsca pracy
+        // Kazdemu agentowi dajemy N szans znalezienia miejsca pracy
         for(int i=0;i<Nprob;i++)
         {
           curr.workX=int(random(agents[0].length));
@@ -25,8 +25,8 @@ void initializeAgents(Agent[][] agents,int[][] env)
           )
           {
                                                assert (env[curr.workY][curr.workX] & 1) == 0;
-             env[curr.workY][curr.workX] |= 1;//Zaklepuje sobie top miejsce pracy
-             break;//Mam już miejsce pracy
+             env[curr.workY][curr.workX] |= 1; //Zaklepuje sobie to miejsce pracy
+             break; //Mam już miejsce pracy
           }
           else //Nadal pracuje w domu
           {
@@ -37,20 +37,20 @@ void initializeAgents(Agent[][] agents,int[][] env)
         agents[a][b]=curr;
       }
       
-   //Inicjowanie infekcji z pozycji losowej
+   // Inicjowanie infekcji z pozycji losowej
    int a=int(random(agents.length/3));
    int b=int(random(agents[0].length/3));
-   if(agents[a][b]==null)//Gdyby go nie było
+   if(agents[a][b]==null) //Gdyby go nie było
    {
-      agents[a][b]=new Agent(b,a);//Konstruktor wymusza podanie x,y położenia!
+      agents[a][b]=new Agent(b,a); //Konstruktor wymusza podanie x,y położenia!
       liveCount++;
    }
    println("Pacjent 0 @",b,"x",a);
    agents[a][b].infection=new Virus(defPDeath,defPSLeav,defDuration);
 }
 
+/// Generuje protest o rozmiarze participationProb na głównej alei (oczywiście z żywych agentów)
 void sheduleProtest(Agent[][] agents,int[][] env,float participationProb)
-//Generuje protest o rozmiarze participationProb na głównej alei (oczywiście z żywych agentów)
 {        
    Agent curra; 
    for(int a=0;a<agents.length;a++)
@@ -90,8 +90,8 @@ void sheduleProtest(Agent[][] agents,int[][] env,float participationProb)
    println("PROTEST STARTED"); //<>//
 }
 
+/// Najprostrze przemieszczanie agentów sterowane upływem czasu symulacji
 void sheduleAgents(Agent[][] agents,int[][] env,int step)
-//Najprostrze przemieszczanie agentów sterowane upływem czasu symulacji
 {
    //lockdownness=0.20; //Ale lockdown nigdy nie jest kompletny (RACZEJ?)
    //lockdownstep=100;  //W którym kroku symulacji wprowadzamy lockdown
@@ -106,36 +106,36 @@ void sheduleAgents(Agent[][] agents,int[][] env,int step)
      {
        if(env[a][b]==Env_ROAD) //Jeśli jest na ulicy to wraca do domu!
        {
-         agents[a][b]=null;//Z ulicy agent znika
-         agents[curra.flatY][curra.flatX]=curra;//teleportuje się do domu
+         agents[a][b]=null; //Z ulicy agent znika
+         agents[curra.flatY][curra.flatX]=curra; //teleportuje się do domu
          continue;
        }
        
        if( curra.workX!=curra.flatX 
-       && curra.workY!=curra.flatY)    //o ile nie pracuje w domu!!!
+       && curra.workY!=curra.flatY)  //o ile nie pracuje w domu!!!
        {
          
          if(step % 2 == 0 )//Jak 0 to z domu do pracy
          { 
            float workProbability=WP;
            if(curra.isInfected())
-             workProbability*=1 - curra.infection.pSickLeave;//println(workProbability);//DEBUG
+             workProbability*=1 - curra.infection.pSickLeave; //println(workProbability);//DEBUG
   
            
            if(env[a][b]==Env_FLAT+1 //Tylko jak nadal jest w domu i zdecydował się iść
            && random(1)< workProbability
            )
            { 
-             agents[a][b]=null;//A z domu znika
-             agents[curra.workY][curra.workX]=curra;//Agent teleportuje się do pracy
+             agents[a][b]=null; //A z domu znika
+             agents[curra.workY][curra.workX]=curra; //Agent teleportuje się do pracy
            }
          }
          else// jak 1 to z pracy do domu
          {
-           if(env[a][b]==Env_WORK+1)//Tylko jak nadal jest w pracy to z niej wraca
+           if(env[a][b]==Env_WORK+1) //Tylko jak nadal jest w pracy to z niej wraca
            { 
-             agents[a][b]=null;//A z pracy znika
-             agents[curra.flatY][curra.flatX]=curra;//Agent teleportuje się do domu
+             agents[a][b]=null; //A z pracy znika
+             agents[curra.flatY][curra.flatX]=curra; //Agent teleportuje się do domu
            }
          }
        }
@@ -143,6 +143,7 @@ void sheduleAgents(Agent[][] agents,int[][] env,int step)
    } 
 }
 
+/// Zmiany stanu agentów
 void  agentsChange(Agent[][] agents)
 {
   //Zapamiętujemy stan przed krokiem
@@ -153,15 +154,15 @@ void  agentsChange(Agent[][] agents)
   int MC=agents.length*agents[0].length;
   for(int i=0;i<MC;i++)
   {
-    int a=(int)random(0,agents.length);//agents[a].lenght na wypadek gdyby nam przyszło do głowy zrobić prostokąt
-    int b=(int)random(0,agents[a].length);//print(a,b,' ');
+    int a=(int)random(0,agents.length); //agents[a].lenght na wypadek gdyby nam przyszło do głowy zrobić prostokąt
+    int b=(int)random(0,agents[a].length); //print(a,b,' ');
     
     if(agents[a][b]!= null )
     {
-       //Jesli agent centralny zmarły lub zdrowy to nie zaraża wiec nic nie robimy
+       // Jesli agent centralny zmarły lub zdrowy to nie zaraża wiec nic nie robimy
        if(!agents[a][b].isAlive() || agents[a][b].isSusceptible() || agents[a][b].isRecovered()) continue;
        
-       //Wyliczenie lokalizacji sąsiadów
+       // Wyliczenie lokalizacji sąsiadów
        int dw=(a+1) % agents.length;   
        int up=(agents.length+a-1) % agents.length;
        int right = (b+1) % agents[a].length;      
@@ -186,12 +187,12 @@ void  agentsChange(Agent[][] agents)
        if(agents[a][b].justDying()) //Albo tego dnia umiera
         { 
           sumDeath++;liveCount--;
-          //agents[a][b]=null;//Można by dawać mu stan "dead", ale...
-          //agents[a][b].state=Death;//Ale to trzeba uwzglednić przy statystyce!
+          //agents[a][b]=null; //Można by dawać mu stan "dead", ale...
+          //agents[a][b].state=Death; //Ale to trzeba uwzglednić przy statystyce!
         }
         else
         {
-          //Albo jest wyleczony
+          // Albo jest wyleczony
           if(agents[a][b].justHealed())
           {
               sumRecovered++;
@@ -200,12 +201,12 @@ void  agentsChange(Agent[][] agents)
         }
     }
   }
-  //Zapamiętujemy zmiane w podstawowych statystykach jaka się dokonała w kroku symulacji
+  // Zapamiętujemy zmiane w podstawowych statystykach jaka się dokonała w kroku symulacji
   deaths.append(sumDeath-befDeath);
   newcas.append(sumInfected-befInfected);
   cured.append(sumRecovered-befRecovered);
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//*//////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  https://www.researchgate.net/profile/WOJCIECH_BORKOWSKI - ABM: BASIC INITIALISATION & EVERY STEP CHANGE
-////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//*//////////////////////////////////////////////////////////////////////////////////////////////////////////
