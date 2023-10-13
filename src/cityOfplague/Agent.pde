@@ -1,19 +1,20 @@
-/// Agent is a one of two central class of each ABM model
-//*/////////////////////////////////////////////////////////////
+/// Agent is a one of two central class of each ABM model.
+/// (Agent jest jedną z dwóch klas centralnych dla każdego modelu ABM)
+//*///////////////////////////////////////////////////////////////////
 
-/// Agent podatny na infekcję jakimś wirusem
+/// @brief Agent podatny na infekcję jakimś wirusem.
 class Agent
 {
-  Virus infection; //!< Jaki ewentualnie wirus aktualnie infekuje 
-  float immunity;  //!< Odporność agenta. Zamiast dawnego PTransfer!
+  Virus infection;   //!< Jaki ewentualnie wirus aktualnie infekuje. 
+  float immunity;    //!< Odporność agenta. Zamiast dawnego PTransfer!
   
-  // Polożenie komorek zamieszkania i pracy
-  int   flatX; //!< X miejsca zamieszkania
-  int   flatY; //!< Y miejsca zamieszkania
-  int   workX; //!< X miejsca pracy
-  int   workY; //!< Y miejsca pracy
+  // Położenie komórek zamieszkania i pracy
+  int   flatX;       //!< X miejsca zamieszkania.
+  int   flatY;       //!< Y miejsca zamieszkania.
+  int   workX;       //!< X miejsca pracy.
+  int   workY;       //!< Y miejsca pracy.
   
-  /// Konstruktor agenta. Inicjuje atrybuty
+  /// @brief Konstruktor agenta. Inicjuje atrybuty.
   Agent(int initX,int initY) 
   {
     infection=null;
@@ -24,7 +25,7 @@ class Agent
              //random(1.0); //Srednia taka sama, ale rozkład płaski
   }
   
-  /// Opis agenta
+  /// @brief Opis agenta.
   String fullInfo(String fieldSeparator)
   {
     return "Immunity: "+immunity+fieldSeparator+
@@ -33,62 +34,62 @@ class Agent
            "Infected: "+infection;
   }
   
-  /// Czy agenty jeszcze żyje?
+  /// @brief Czy agent jeszcze żyje?
   boolean isAlive()
   {
     if(isSusceptible()) return true;
     return infection.state!=HostDeath;
   }
   
-  /// Czy agent jest podatny na infekcje?
+  /// @brief Czy agent jest podatny na infekcje?
   boolean isSusceptible()
   {
     return infection==null;
   }
   
-  /// Czy agent jest zainfekowany?
+  /// @brief Czy agent jest zainfekowany?
   boolean isInfected()
   {
-    if(infection==null) return false;
-    assert infection.state!=HostDeath : "Nie można być martwy!";
+    if(infection==null) return false;    assert infection.state!=HostDeath : "Nie można być martwym!";
     return infection.state!=Recovered && Infected<=infection.state; //<=
   }  
   
-  //float   hasIllness() //Jakby zarażał od wyższego progu?
+  // @brief Jakby zarażał od wyższego progu?
+  //float   hasIllness() 
   //{
   //  if(infection==null) return 0;
   //  return infection.state; //???
   //}
   
-  /// Czy już wyzdrowiał?
+  /// @brief Czy już wyzdrowiał?
   boolean isRecovered()
   {
     if(infection==null) return false;
     return infection.state==Recovered;
   }
   
-  /// Czy jest umierający?
+  /// @brief Czy jest umierający?
   boolean justDying()
   {
     if(infection==null) 
-        return false; //Nie ma na co umrzeć
+        return false; // Nie ma na co umrzeć
         
     assert infection.state!=HostDeath : "Nie można umrzeć więcej niż raz!";
     
     if(infection.state==Recovered)
         return false;
         
-    float prob=random(1); //Los na dany dzień
+    float prob=random(1); // Los na dany dzień
     
-    if(prob<infection.pDeath) //Albo tego dnia umiera
+    if(prob<infection.pDeath) // Albo tego dnia umiera
     {
       infection.state=HostDeath;
       return true;
     }
-    else return false; //Albo zyje dalej
+    else return false; // Albo zyje dalej
   }
   
-  /// Właśnie wyleczony!
+  /// @brief Właśnie wyleczony!
   boolean justHealed()
   {
     assert !isSusceptible() : "Agent musi mieć zarazek!";
@@ -103,7 +104,7 @@ class Agent
       return false;
   }
   
-  /// Implementacja infekcji
+  /// @brief Implementacja infekcji
   void transferFrom(Agent infectious)
   {
     assert !infectious.isSusceptible() : "'infectious' musi mieć zarazek!";

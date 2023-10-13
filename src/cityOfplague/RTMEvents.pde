@@ -1,10 +1,9 @@
-///  Dopasowana do modelu obsługa zdarzeń
-//*/////////////////////////////////////////////////
+/// Event handling tailored to this model.
+/// (Dopasowana do modelu obsługa zdarzeń)
+//*///////////////////////////////////////
  
-
 //double minDist2Selec=MAX_INT;
 //double maxTransSelec=-MAX_INT;
-
 
 void keyPressed() 
 {

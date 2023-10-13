@@ -1,7 +1,10 @@
-/// Exit function is called whenever a window is closed. 
+// When exit?
+//*//////////
+
+/// @brief Exit function is called whenever a window is closed.
 void exit()          
 {
-  noLoop();          //For to be sure...
+  noLoop();          // For to be sure...
   delay(100);        // it is possible to close window when draw() is still working!
   //write(world,modelName+"."+nf((float)StepCounter,5,5));//end state of the system
   
@@ -11,10 +14,10 @@ void exit()
     outstat.close();  // Finishes the file
   }
   
-  if(WITH_VIDEO) CloseVideo();    //Finalise of Video export
+  if(WITH_VIDEO) CloseVideo();    // Finalise of Video export
   
   println(modelName,"said: Thank You!");
-  super.exit();       //What library superclass have to do at exit()
+  super.exit();       // Do, what library superclass have to do at `exit()`!
 } 
 
 //*/////////////////////////////////////////////////////////////////////////////////////////

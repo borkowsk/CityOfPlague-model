@@ -1,32 +1,33 @@
-/// "environment" czyli mapa środowiska życia agentów
-//*/////////////////////////////////////////////////////////
+/// "environment", i.e. a map of the agents' living environment
+/// (... czyli mapa środowiska życia agentów)
+//*////////////////////////////////////////////////////////////
 
-//enum EnvTile {FLAT=0,WORK,ROAD,REST} //To enum w Processingu jest obiektem co jest w tej symulacji bez sensu!
+//enum EnvTile {FLAT=0,WORK,ROAD,REST} //Takie enum w Processingu jest obiektem co jest w tej symulacji bez sensu!
 
-/// Environment "tiles"
-final int Env_FLAT=0;      ///< Pusta
-final int Env_WORK=100;    ///< Strefa pracy
-final int Env_SHOP=120;    ///< Strefa zakupów
-final int Env_ROAD=200;    ///< droga
-final int Env_REST=300;    ///< Strefa rekracji
+// Environment "tiles"
+final int Env_FLAT=0;      ///< Komórka pusta.
+final int Env_WORK=100;    ///< Strefa pracy.
+final int Env_SHOP=120;    ///< Strefa zakupów.
+final int Env_ROAD=200;    ///< droga.
+final int Env_REST=300;    ///< Strefa rekracji.
 
-float limit=105;          ///< ???
-float fcars=0.05;         ///< ???
-int   streetcount=0;      ///< zliczanie ulic podczas inicjalizacji
-int   avenuecount=0;      ///< zliczanie alei podczas inicjalizacji. Aleje są to te pionowe!
+float limit=105;           ///< ???
+float fcars=0.05;          ///< Jaką część szerokości pasa zabudowy zajmuje jego ulica.
+int   streetcount=0;       ///< zliczanie ulic podczas inicjalizacji. To są te poziome.
+int   avenuecount=0;       ///< zliczanie alei podczas inicjalizacji. Aleje są to te pionowe!
 
-/// Inicjalizacja środowiska
+/// @brief Inicjalizacja środowiska.
 void initializeEnv(int[][] env)
 {
   limit=10;
   sierpinskiCarpetRect(env,Env_WORK,0,0,env[0].length,env.length);
   limit=1;
-  street(env,0,env.length); //Ulice są poziome
-  avenue(env,0,env[0].length); //Aleje są pionowe
+  street(env,0,env.length);    // Ulice są poziome
+  avenue(env,0,env[0].length); // Aleje są pionowe
   //println(streetcount,avenuecount);
 }
 
-/// Wypełnianie bloku środowiska
+/// @brief Wypełnianie bloku środowiska.
 void fillblock(int[][] env,int val,int x1,int y1,int x2,int y2)
 {
   for(int a=x1;a<x2;a++)
@@ -34,7 +35,7 @@ void fillblock(int[][] env,int val,int x1,int y1,int x2,int y2)
      env[b][a]=val;
 }
 
-/// Rysowanie alei (pionowo)
+/// @brief Rysowanie alei (pionowo).
 void avenue(int[][] env,float start,float end)
 {
   float len=end-start; //Szerokość pasa zabudowy
@@ -50,13 +51,13 @@ void avenue(int[][] env,float start,float end)
   avenue(env,center+weight/2,end);
 }
 
-/// Rysowanie ulicy (poziomo)
+/// @brief Rysowanie ulicy (poziomo).
 void street(int[][] env,float start,float end)
 {
-  float len=end-start; //Szerokość pasa zabudowy
-  float weight=len*fcars; //Szerokość ulicy
-  if(weight<limit) return; //Czy nie za wąska dla samochodu?
-  streetcount++; //Zliczenie
+  float len=end-start;     // Szerokość pasa zabudowy
+  float weight=len*fcars;  // Szerokość ulicy
+  if(weight<limit) return; // Czy nie za wąska dla samochodu?
+  streetcount++;           // Zliczenie
   
   float center=(start+end)/2;
   
@@ -66,7 +67,7 @@ void street(int[][] env,float start,float end)
   street(env,center+weight/2,end);
 }
 
-/// Wypełnianie środowiska ulicami
+/// @brief Wypełnianie środowiska ulicami.
 void sierpinskiCarpetRect(int[][] env,int val,int x, int y, int sizex, int sizey)
 {
    if (sizey < limit)
