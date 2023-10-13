@@ -29,6 +29,9 @@ Dostęp read-only za pomoca protokołu _https_
 
 ```
 git clone https://github.com/borkowsk/CityOfPlague-model.git
+cd CityOfPlague-model.git
+./_check.sh
+cd src/cityOfplague/
 ```
 
 Dostęp z możliwością modyfikacji można uzyskać za pomocą protokołu _ssh_ , otrzymując uprzednio odpowiednie prawa 
@@ -36,11 +39,15 @@ od autora projektu.
 
 ```
 git clone git@github.com:borkowsk/CityOfPlague-model.git
+cd CityOfPlague-model.git
+./_check.sh
+cd src/cityOfplague/
 ```
-UWAGA! Nazwa katalogu musi być domyślna czyli taka sama jak nazwa głównego pliku źródłowego
-To jest wymaganie __Processing__u:
 
-**cityOfplague/cityOfplague.pde**
+UWAGA! Nazwa katalogu z plikami _*.pde_ musi być domyślna czyli taka sama jak 
+nazwa głównego pliku źródłowego aplikacji. To jest wymaganie __Processing__u:
+
+**src/cityOfplague/cityOfplague.pde**
 
 
 ## FINANSOWANIE
