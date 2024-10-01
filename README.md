@@ -126,6 +126,6 @@ This project is sponsored by __Centre For Systemic Risk Analisis__.
 * _"Komórkowy model epidemii"_ : https://github.com/borkowsk/bookProcessingPL/tree/master/15_epidemia
   
 
-<img src="doc/logo.png">logos</img>
+<img src="doc/Logo-ISS-CBRS-UW.png">logos</img>
 
 
