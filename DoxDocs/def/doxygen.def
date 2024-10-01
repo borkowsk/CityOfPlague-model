@@ -1,0 +1,3320 @@
+AutoGen Definitions dummy;
+class = {
+  cp-id     = 'classcityOfplague_1_1Agent';
+  cp-name   = 'cityOfplague::Agent';
+  cp-section = {
+    sec-kind = 'public-func';
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1_1Agent_1a6c65bfe2ee776ec1761f27d254093560';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+String
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'fullInfo';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+String
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'fieldSeparator';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '215';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Opis agenta.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1abb03faf6309f6304c013289ed7e1ecf3';
+        sec-mem-ref-line = '198';
+        sec-mem-ref-name = 'cityOfplague.Agent::flatX';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ac735539a289cb31c65d75926d73d4332';
+        sec-mem-ref-line = '199';
+        sec-mem-ref-name = 'cityOfplague.Agent::flatY';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1acb054212fd33d47a54ca7740b39adf1c';
+        sec-mem-ref-line = '195';
+        sec-mem-ref-name = 'cityOfplague.Agent::immunity';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ae3a45e18e69a1e8de02e76e659e29ad0';
+        sec-mem-ref-line = '194';
+        sec-mem-ref-name = 'cityOfplague.Agent::infection';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1adedb26189df0b67c24df1321567a48d6';
+        sec-mem-ref-line = '200';
+        sec-mem-ref-name = 'cityOfplague.Agent::workX';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1aed1794e339033eca17307ed5fc3a270c';
+        sec-mem-ref-line = '201';
+        sec-mem-ref-name = 'cityOfplague.Agent::workY';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a4d9fecc44e5babe663813ff87709c45f';
+        sec-mem-ref-line = '1209';
+        sec-mem-ref-name = 'cityOfplague::mouseClicked';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1_1Agent_1a586f36e82a7f658c4994a7b059de675f';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+boolean
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'isAlive';
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '224';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Czy agent jeszcze żyje?
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a1c267123844f2a1e90fec5d904efc07d';
+        sec-mem-ref-line = '65';
+        sec-mem-ref-name = 'cityOfplague::HostDeath';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ae3a45e18e69a1e8de02e76e659e29ad0';
+        sec-mem-ref-line = '194';
+        sec-mem-ref-name = 'cityOfplague.Agent::infection';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a45a67ef4bbd3e866a960a17fcddd04ed';
+        sec-mem-ref-line = '231';
+        sec-mem-ref-name = 'cityOfplague.Agent::isSusceptible';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a7b3a67b36e3179d4c5eaaa9c71c5a9e5';
+        sec-mem-ref-line = '549';
+        sec-mem-ref-name = 'cityOfplague.Virus::state';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a06a2eecb8191d3109a5996bcd9915f1a';
+        sec-mem-ref-line = '744';
+        sec-mem-ref-name = 'cityOfplague::histogram';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1aa685d868bb4984e146180fca3254b295';
+        sec-mem-ref-line = '397';
+        sec-mem-ref-name = 'cityOfplague::sheduleAgents';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ad32f77b4dc3856b24277567b8b2c3f61';
+        sec-mem-ref-line = '357';
+        sec-mem-ref-name = 'cityOfplague::sheduleProtest';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1_1Agent_1a45a67ef4bbd3e866a960a17fcddd04ed';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+boolean
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'isSusceptible';
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '231';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Czy agent jest podatny na infekcje?
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ae3a45e18e69a1e8de02e76e659e29ad0';
+        sec-mem-ref-line = '194';
+        sec-mem-ref-name = 'cityOfplague.Agent::infection';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a144dcdd32025189e548f322e6bef694a';
+        sec-mem-ref-line = '450';
+        sec-mem-ref-name = 'cityOfplague::agentsChange';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a586f36e82a7f658c4994a7b059de675f';
+        sec-mem-ref-line = '224';
+        sec-mem-ref-name = 'cityOfplague.Agent::isAlive';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a9df2669d0c0a8ea6a966add749c980f9';
+        sec-mem-ref-line = '279';
+        sec-mem-ref-name = 'cityOfplague.Agent::justHealed';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a568c72c2b2db9a12860c0e98c8402d51';
+        sec-mem-ref-line = '294';
+        sec-mem-ref-name = 'cityOfplague.Agent::transferFrom';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ab07037ce97f728d99dc3365cc297c3da';
+        sec-mem-ref-line = '1072';
+        sec-mem-ref-name = 'cityOfplague::visualizeAgents';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1_1Agent_1a60741cc4df4c23f157bae62e84c2b04f';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+boolean
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'isInfected';
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '237';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Czy agent jest zainfekowany?
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a1c267123844f2a1e90fec5d904efc07d';
+        sec-mem-ref-line = '65';
+        sec-mem-ref-name = 'cityOfplague::HostDeath';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ad4f45d6ed4f6af821350382cd0afd68c';
+        sec-mem-ref-line = '63';
+        sec-mem-ref-name = 'cityOfplague::Infected';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ae3a45e18e69a1e8de02e76e659e29ad0';
+        sec-mem-ref-line = '194';
+        sec-mem-ref-name = 'cityOfplague.Agent::infection';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a4462bc879bb562e6ec3794237974ef62';
+        sec-mem-ref-line = '64';
+        sec-mem-ref-name = 'cityOfplague::Recovered';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a7b3a67b36e3179d4c5eaaa9c71c5a9e5';
+        sec-mem-ref-line = '549';
+        sec-mem-ref-name = 'cityOfplague.Virus::state';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1aa685d868bb4984e146180fca3254b295';
+        sec-mem-ref-line = '397';
+        sec-mem-ref-name = 'cityOfplague::sheduleAgents';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1_1Agent_1a2d5b07f7807528ac531fedd588d886dd';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+boolean
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'isRecovered';
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '251';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Czy już wyzdrowiał?
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ae3a45e18e69a1e8de02e76e659e29ad0';
+        sec-mem-ref-line = '194';
+        sec-mem-ref-name = 'cityOfplague.Agent::infection';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a4462bc879bb562e6ec3794237974ef62';
+        sec-mem-ref-line = '64';
+        sec-mem-ref-name = 'cityOfplague::Recovered';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a7b3a67b36e3179d4c5eaaa9c71c5a9e5';
+        sec-mem-ref-line = '549';
+        sec-mem-ref-name = 'cityOfplague.Virus::state';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a144dcdd32025189e548f322e6bef694a';
+        sec-mem-ref-line = '450';
+        sec-mem-ref-name = 'cityOfplague::agentsChange';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a9df2669d0c0a8ea6a966add749c980f9';
+        sec-mem-ref-line = '279';
+        sec-mem-ref-name = 'cityOfplague.Agent::justHealed';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1_1Agent_1a8f4543ffe095a1919771901b32cd530d';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+boolean
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'justDying';
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '258';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Czy jest umierający?
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a1c267123844f2a1e90fec5d904efc07d';
+        sec-mem-ref-line = '65';
+        sec-mem-ref-name = 'cityOfplague::HostDeath';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ae3a45e18e69a1e8de02e76e659e29ad0';
+        sec-mem-ref-line = '194';
+        sec-mem-ref-name = 'cityOfplague.Agent::infection';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a925700badd19fc8d4211eb997e4499af';
+        sec-mem-ref-line = '529';
+        sec-mem-ref-name = 'cityOfplague.Germ::pDeath';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a4462bc879bb562e6ec3794237974ef62';
+        sec-mem-ref-line = '64';
+        sec-mem-ref-name = 'cityOfplague::Recovered';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a7b3a67b36e3179d4c5eaaa9c71c5a9e5';
+        sec-mem-ref-line = '549';
+        sec-mem-ref-name = 'cityOfplague.Virus::state';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1_1Agent_1a9df2669d0c0a8ea6a966add749c980f9';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+boolean
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'justHealed';
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '279';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Właśnie wyleczony!
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a9a23ae6620f42092f06489864a337f33';
+        sec-mem-ref-line = '531';
+        sec-mem-ref-name = 'cityOfplague.Germ::duration';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ae3a45e18e69a1e8de02e76e659e29ad0';
+        sec-mem-ref-line = '194';
+        sec-mem-ref-name = 'cityOfplague.Agent::infection';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a2d5b07f7807528ac531fedd588d886dd';
+        sec-mem-ref-line = '251';
+        sec-mem-ref-name = 'cityOfplague.Agent::isRecovered';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a45a67ef4bbd3e866a960a17fcddd04ed';
+        sec-mem-ref-line = '231';
+        sec-mem-ref-name = 'cityOfplague.Agent::isSusceptible';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a4462bc879bb562e6ec3794237974ef62';
+        sec-mem-ref-line = '64';
+        sec-mem-ref-name = 'cityOfplague::Recovered';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a7b3a67b36e3179d4c5eaaa9c71c5a9e5';
+        sec-mem-ref-line = '549';
+        sec-mem-ref-name = 'cityOfplague.Virus::state';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1_1Agent_1a568c72c2b2db9a12860c0e98c8402d51';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'transferFrom';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Agent
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'infectious';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '294';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Implementacja infekcji.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1aa412d0456f6f0be3ffd446d0f6b51d77';
+        sec-mem-ref-line = '561';
+        sec-mem-ref-name = 'cityOfplague.Virus::clone';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ae3a45e18e69a1e8de02e76e659e29ad0';
+        sec-mem-ref-line = '194';
+        sec-mem-ref-name = 'cityOfplague.Agent::infection';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a45a67ef4bbd3e866a960a17fcddd04ed';
+        sec-mem-ref-line = '231';
+        sec-mem-ref-name = 'cityOfplague.Agent::isSusceptible';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a144dcdd32025189e548f322e6bef694a';
+        sec-mem-ref-line = '450';
+        sec-mem-ref-name = 'cityOfplague::agentsChange';
+    };
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+  cp-fileline  = '192';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+Agent is a one of two central class of each ABM model.
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+(Agent jest jedną z dwóch klas centralnych dla każdego modelu ABM) 
+
+Agent podatny na infekcję jakimś wirusem.
+_EnD_oF_dEf_TeXt_;
+  cp-collaborationgraph = <<_EnD_oF_dEf_TeXt_
+      node = {
+        node-id    = 3;
+        node-label = 'cityOfplague.Germ';
+        node-link = {
+          node-link-id = 'classcityOfplague_1_1Germ';
+        };
+        node-child = {
+          child-id = '4';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 4;
+        node-label = 'cityOfplague.Animalcule';
+        node-link = {
+          node-link-id = 'classcityOfplague_1_1Animalcule';
+        };
+      }; /* node */
+      node = {
+        node-id    = 1;
+        node-label = 'cityOfplague.Agent';
+        node-link = {
+          node-link-id = 'classcityOfplague_1_1Agent';
+        };
+        node-child = {
+          child-id = '2';
+          relation = usage;
+          edgelabel = <<_EnD_oF_dEf_TeXt_
+infection
+_EnD_oF_dEf_TeXt_;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 2;
+        node-label = 'cityOfplague.Virus';
+        node-link = {
+          node-link-id = 'classcityOfplague_1_1Virus';
+        };
+        node-child = {
+          child-id = '3';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+
+_EnD_oF_dEf_TeXt_;
+}; /* class */
+class = {
+  cp-id     = 'classcityOfplague_1_1Animalcule';
+  cp-name   = 'cityOfplague::Animalcule';
+  cp-ref     = {
+    ref-type = derived;
+    ref-id   = 'classcityOfplague_1_1Germ';
+    ref-prot = public;
+    ref-virt = non-virtual;
+  };
+  cp-filename  = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+  cp-fileline  = '522';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+Germs, i.e.
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+ various "little things" that can harm agents.
+(Zarazki czyli różne "żyjątka", które mogę szkodzić agentom) 
+
+Klasa bazowa wszelkich "żyjątek"
+_EnD_oF_dEf_TeXt_;
+  cp-inheritancegraph = <<_EnD_oF_dEf_TeXt_
+      node = {
+        node-id    = 2;
+        node-label = 'cityOfplague.Germ';
+        node-link = {
+          node-link-id = 'classcityOfplague_1_1Germ';
+        };
+        node-child = {
+          child-id = '1';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 1;
+        node-label = 'cityOfplague.Animalcule';
+        node-link = {
+          node-link-id = 'classcityOfplague_1_1Animalcule';
+        };
+      }; /* node */
+      node = {
+        node-id    = 3;
+        node-label = 'cityOfplague.Virus';
+        node-link = {
+          node-link-id = 'classcityOfplague_1_1Virus';
+        };
+        node-child = {
+          child-id = '2';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+
+_EnD_oF_dEf_TeXt_;
+}; /* class */
+class = {
+  cp-id     = 'classcityOfplague';
+  cp-name   = 'cityOfplague';
+  cp-ref     = {
+    ref-type = base;
+    ref-id   = 'classPApplet';
+    ref-prot = public;
+    ref-virt = non-virtual;
+  };
+  cp-section = {
+    sec-kind = 'public-func';
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1aca453c0bde41f46386b498ff6c6a6512';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'setup';
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '92';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1af0087c0a96b4d0ebc6d40c8247d35be3';
+        sec-mem-ref-line = '83';
+        sec-mem-ref-name = 'cwidth';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a2dfca870cf3b45a394b79c3487eed2ef';
+        sec-mem-ref-line = '1009';
+        sec-mem-ref-name = 'doStatistics';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a306e478a270c71b1151b934e60c9a298';
+        sec-mem-ref-line = '1289';
+        sec-mem-ref-name = 'FirstVideoFrame';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ae37a055d7cb79378c471f019c48d619a';
+        sec-mem-ref-line = '87';
+        sec-mem-ref-name = 'FRAMEFREQ';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ab45a51ddda1218bdf14cf1e75bab42ab';
+        sec-mem-ref-line = '607';
+        sec-mem-ref-name = 'initializeModel';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a5e9b07f0c07e6e5e7712e6dadb445182';
+        sec-mem-ref-line = '1279';
+        sec-mem-ref-name = 'initVideoExport';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a3c901272a3b904a55ddf9f5a61fad9c0';
+        sec-mem-ref-line = '38';
+        sec-mem-ref-name = 'modelName';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a308e6908b6434acb0149734d81e3b4ba';
+        sec-mem-ref-line = '1302';
+        sec-mem-ref-name = 'NextVideoFrame';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a84ec15c76be9493f8b3e05a5a18cb1c7';
+        sec-mem-ref-line = '39';
+        sec-mem-ref-name = 'RANDSEED';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a1e6a04f10e12042b327475aebba3d0a1';
+        sec-mem-ref-line = '41';
+        sec-mem-ref-name = 'side';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a28b8a9dc3e0a2adb32b47429cb541678';
+        sec-mem-ref-line = '90';
+        sec-mem-ref-name = 'simulationRun';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a5b349a87b75e96ce9732dc7f13e325a7';
+        sec-mem-ref-line = '85';
+        sec-mem-ref-name = 'STATUSHEIGH';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a99b9fbbd98dadc8d28b2157f531e371d';
+        sec-mem-ref-line = '67';
+        sec-mem-ref-name = 'TheWorld';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a6f72f436dfd076b5902f3d4dd8b68ceb';
+        sec-mem-ref-line = '614';
+        sec-mem-ref-name = 'visualizeModel';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a0385ab50bbea4d1c941dc7cacf7143e8';
+        sec-mem-ref-line = '89';
+        sec-mem-ref-name = 'WITH_VIDEO';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1ab3eb7fab6c778fffd1ce01a048df77ad';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'draw';
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '133';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a2dfca870cf3b45a394b79c3487eed2ef';
+        sec-mem-ref-line = '1009';
+        sec-mem-ref-name = 'doStatistics';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a3e010c674bc522f38e4e129df7c921a3';
+        sec-mem-ref-line = '621';
+        sec-mem-ref-name = 'modelStep';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a308e6908b6434acb0149734d81e3b4ba';
+        sec-mem-ref-line = '1302';
+        sec-mem-ref-name = 'NextVideoFrame';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a28b8a9dc3e0a2adb32b47429cb541678';
+        sec-mem-ref-line = '90';
+        sec-mem-ref-name = 'simulationRun';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a834fd9f6503117f4c6f2818cdec9f72b';
+        sec-mem-ref-line = '585';
+        sec-mem-ref-name = 'StepCounter';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a245f344093f138913546b49eb27e5464';
+        sec-mem-ref-line = '86';
+        sec-mem-ref-name = 'STEPSperVIS';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a99b9fbbd98dadc8d28b2157f531e371d';
+        sec-mem-ref-line = '67';
+        sec-mem-ref-name = 'TheWorld';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a6f72f436dfd076b5902f3d4dd8b68ceb';
+        sec-mem-ref-line = '614';
+        sec-mem-ref-name = 'visualizeModel';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ad7094e3ce7dedd641945c0894e3f5427';
+        sec-mem-ref-line = '153';
+        sec-mem-ref-name = 'writeStatusLine';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1ad7094e3ce7dedd641945c0894e3f5427';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'writeStatusLine';
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '153';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Wypełnianie linii statusu.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a47221820a93ea6cd3978ab439d6dd669';
+        sec-mem-ref-line = '590';
+        sec-mem-ref-name = 'cityOfplague.World::agents';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1afa3cab89a7308800c6188070eba2a11e';
+        sec-mem-ref-line = '79';
+        sec-mem-ref-name = 'cured';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1af0087c0a96b4d0ebc6d40c8247d35be3';
+        sec-mem-ref-line = '83';
+        sec-mem-ref-name = 'cwidth';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a1b0b026079dfd604764f159eaef2f37d';
+        sec-mem-ref-line = '77';
+        sec-mem-ref-name = 'deaths';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a06a2eecb8191d3109a5996bcd9915f1a';
+        sec-mem-ref-line = '744';
+        sec-mem-ref-name = 'histogram';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1af17a9be217b099fe44e00bf6fa42e4b1';
+        sec-mem-ref-line = '71';
+        sec-mem-ref-name = 'liveCount';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a05e2aa3e96b1fdba77265834d254c289';
+        sec-mem-ref-line = '57';
+        sec-mem-ref-name = 'lockdownness';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a50fe00b434aa47a7cfc038192cf7f85b';
+        sec-mem-ref-line = '58';
+        sec-mem-ref-name = 'lockdownStep';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a3aa1ea96b5c356b32acf1e2147aca231';
+        sec-mem-ref-line = '78';
+        sec-mem-ref-name = 'newcas';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a1e6a04f10e12042b327475aebba3d0a1';
+        sec-mem-ref-line = '41';
+        sec-mem-ref-name = 'side';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a28b8a9dc3e0a2adb32b47429cb541678';
+        sec-mem-ref-line = '90';
+        sec-mem-ref-name = 'simulationRun';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a5b349a87b75e96ce9732dc7f13e325a7';
+        sec-mem-ref-line = '85';
+        sec-mem-ref-name = 'STATUSHEIGH';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a834fd9f6503117f4c6f2818cdec9f72b';
+        sec-mem-ref-line = '585';
+        sec-mem-ref-name = 'StepCounter';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ade8599f588ec5222b60a1ad37ff601f7';
+        sec-mem-ref-line = '75';
+        sec-mem-ref-name = 'sumDeath';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a0ed01c309eeadaee98da5fb802bd445f';
+        sec-mem-ref-line = '73';
+        sec-mem-ref-name = 'sumInfected';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a53fd6fbeac709fa09b0a806c6753a59e';
+        sec-mem-ref-line = '74';
+        sec-mem-ref-name = 'sumRecovered';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a99b9fbbd98dadc8d28b2157f531e371d';
+        sec-mem-ref-line = '67';
+        sec-mem-ref-name = 'TheWorld';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a5db36bc1601ff5b83b3d0b970966083a';
+        sec-mem-ref-line = '793';
+        sec-mem-ref-name = 'timeline';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ab3eb7fab6c778fffd1ce01a048df77ad';
+        sec-mem-ref-line = '133';
+        sec-mem-ref-name = 'draw';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1af50b9ec32a898a4da1ccbf2e31437d48';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'initializeAgents';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Agent
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'agents';
+        sec-mem-param-array = '[][]';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'env';
+        sec-mem-param-array = '[][]';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '310';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Agent needs to be initialised & they need logic of change
+(Agent musi zostać zainicjowany i potrzebuje logiki zmian)
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Funkcja umieszcza agentów w domach i szuka im pracy
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1aa228f771fa19378541f9e40312be7e05';
+        sec-mem-ref-line = '51';
+        sec-mem-ref-name = 'defDuration';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a7810f48075dabcd2ee852e5b0e2447d3';
+        sec-mem-ref-line = '50';
+        sec-mem-ref-name = 'defPDeath';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a6d41ab805f9a203d0eaf9ea9fa05391c';
+        sec-mem-ref-line = '49';
+        sec-mem-ref-name = 'defPSLeav';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a82f9e85e0950485d82c3c692687b16a6';
+        sec-mem-ref-line = '42';
+        sec-mem-ref-name = 'density';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a45e46b1c95741aef25229856ce7a9ea7';
+        sec-mem-ref-line = '646';
+        sec-mem-ref-name = 'Env_FLAT';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1abb03faf6309f6304c013289ed7e1ecf3';
+        sec-mem-ref-line = '198';
+        sec-mem-ref-name = 'cityOfplague.Agent::flatX';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ac735539a289cb31c65d75926d73d4332';
+        sec-mem-ref-line = '199';
+        sec-mem-ref-name = 'cityOfplague.Agent::flatY';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ae3a45e18e69a1e8de02e76e659e29ad0';
+        sec-mem-ref-line = '194';
+        sec-mem-ref-name = 'cityOfplague.Agent::infection';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1af17a9be217b099fe44e00bf6fa42e4b1';
+        sec-mem-ref-line = '71';
+        sec-mem-ref-name = 'liveCount';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a8ea8828cfcc77c667486f8bf01468692';
+        sec-mem-ref-line = '55';
+        sec-mem-ref-name = 'Nprob';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1adedb26189df0b67c24df1321567a48d6';
+        sec-mem-ref-line = '200';
+        sec-mem-ref-name = 'cityOfplague.Agent::workX';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1aed1794e339033eca17307ed5fc3a270c';
+        sec-mem-ref-line = '201';
+        sec-mem-ref-name = 'cityOfplague.Agent::workY';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ab45a51ddda1218bdf14cf1e75bab42ab';
+        sec-mem-ref-line = '607';
+        sec-mem-ref-name = 'initializeModel';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1ad32f77b4dc3856b24277567b8b2c3f61';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'sheduleProtest';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Agent
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'agents';
+        sec-mem-param-array = '[][]';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'env';
+        sec-mem-param-array = '[][]';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+float
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'participationProb';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '357';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Generuje protest o rozmiarze participationProb na głównej alei (oczywiście tylko z żywych agentów)
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1abd4bb619d355a75e1f16a77654a9c4b1';
+        sec-mem-ref-line = '649';
+        sec-mem-ref-name = 'Env_ROAD';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a586f36e82a7f658c4994a7b059de675f';
+        sec-mem-ref-line = '224';
+        sec-mem-ref-name = 'cityOfplague.Agent::isAlive';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a3e010c674bc522f38e4e129df7c921a3';
+        sec-mem-ref-line = '621';
+        sec-mem-ref-name = 'modelStep';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1aa685d868bb4984e146180fca3254b295';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'sheduleAgents';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Agent
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'agents';
+        sec-mem-param-array = '[][]';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'env';
+        sec-mem-param-array = '[][]';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'step';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '397';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Najprostrze przemieszczanie agentów sterowane upływem czasu symulacji.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a05cef7196c0aeb2e5f8e76a61615a421';
+        sec-mem-ref-line = '56';
+        sec-mem-ref-name = 'dutifulness';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a45e46b1c95741aef25229856ce7a9ea7';
+        sec-mem-ref-line = '646';
+        sec-mem-ref-name = 'Env_FLAT';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1abd4bb619d355a75e1f16a77654a9c4b1';
+        sec-mem-ref-line = '649';
+        sec-mem-ref-name = 'Env_ROAD';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a70e81a9bd25af5bdda2d48d18b7861ea';
+        sec-mem-ref-line = '647';
+        sec-mem-ref-name = 'Env_WORK';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1abb03faf6309f6304c013289ed7e1ecf3';
+        sec-mem-ref-line = '198';
+        sec-mem-ref-name = 'cityOfplague.Agent::flatX';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ac735539a289cb31c65d75926d73d4332';
+        sec-mem-ref-line = '199';
+        sec-mem-ref-name = 'cityOfplague.Agent::flatY';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ae3a45e18e69a1e8de02e76e659e29ad0';
+        sec-mem-ref-line = '194';
+        sec-mem-ref-name = 'cityOfplague.Agent::infection';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a586f36e82a7f658c4994a7b059de675f';
+        sec-mem-ref-line = '224';
+        sec-mem-ref-name = 'cityOfplague.Agent::isAlive';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a60741cc4df4c23f157bae62e84c2b04f';
+        sec-mem-ref-line = '237';
+        sec-mem-ref-name = 'cityOfplague.Agent::isInfected';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a05e2aa3e96b1fdba77265834d254c289';
+        sec-mem-ref-line = '57';
+        sec-mem-ref-name = 'lockdownness';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a50fe00b434aa47a7cfc038192cf7f85b';
+        sec-mem-ref-line = '58';
+        sec-mem-ref-name = 'lockdownStep';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1aa945a11fa010a9b43b90434f397936a6';
+        sec-mem-ref-line = '530';
+        sec-mem-ref-name = 'cityOfplague.Germ::pSickLeave';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a834fd9f6503117f4c6f2818cdec9f72b';
+        sec-mem-ref-line = '585';
+        sec-mem-ref-name = 'StepCounter';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1adedb26189df0b67c24df1321567a48d6';
+        sec-mem-ref-line = '200';
+        sec-mem-ref-name = 'cityOfplague.Agent::workX';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1aed1794e339033eca17307ed5fc3a270c';
+        sec-mem-ref-line = '201';
+        sec-mem-ref-name = 'cityOfplague.Agent::workY';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a3e010c674bc522f38e4e129df7c921a3';
+        sec-mem-ref-line = '621';
+        sec-mem-ref-name = 'modelStep';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1a144dcdd32025189e548f322e6bef694a';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'agentsChange';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Agent
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'agents';
+        sec-mem-param-array = '[][]';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '450';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Zmiany stanu agentów.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1afa3cab89a7308800c6188070eba2a11e';
+        sec-mem-ref-line = '79';
+        sec-mem-ref-name = 'cured';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a1b0b026079dfd604764f159eaef2f37d';
+        sec-mem-ref-line = '77';
+        sec-mem-ref-name = 'deaths';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1acb054212fd33d47a54ca7740b39adf1c';
+        sec-mem-ref-line = '195';
+        sec-mem-ref-name = 'cityOfplague.Agent::immunity';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a2d5b07f7807528ac531fedd588d886dd';
+        sec-mem-ref-line = '251';
+        sec-mem-ref-name = 'cityOfplague.Agent::isRecovered';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a45a67ef4bbd3e866a960a17fcddd04ed';
+        sec-mem-ref-line = '231';
+        sec-mem-ref-name = 'cityOfplague.Agent::isSusceptible';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1af17a9be217b099fe44e00bf6fa42e4b1';
+        sec-mem-ref-line = '71';
+        sec-mem-ref-name = 'liveCount';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a3aa1ea96b5c356b32acf1e2147aca231';
+        sec-mem-ref-line = '78';
+        sec-mem-ref-name = 'newcas';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ade8599f588ec5222b60a1ad37ff601f7';
+        sec-mem-ref-line = '75';
+        sec-mem-ref-name = 'sumDeath';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a0ed01c309eeadaee98da5fb802bd445f';
+        sec-mem-ref-line = '73';
+        sec-mem-ref-name = 'sumInfected';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a53fd6fbeac709fa09b0a806c6753a59e';
+        sec-mem-ref-line = '74';
+        sec-mem-ref-name = 'sumRecovered';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a568c72c2b2db9a12860c0e98c8402d51';
+        sec-mem-ref-line = '294';
+        sec-mem-ref-name = 'cityOfplague.Agent::transferFrom';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a3e010c674bc522f38e4e129df7c921a3';
+        sec-mem-ref-line = '621';
+        sec-mem-ref-name = 'modelStep';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1ab45a51ddda1218bdf14cf1e75bab42ab';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'initializeModel';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+World
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'world';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '607';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Inicjalizacja całości świata.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a47221820a93ea6cd3978ab439d6dd669';
+        sec-mem-ref-line = '590';
+        sec-mem-ref-name = 'cityOfplague.World::agents';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a88ffe51fbb105f69d4c223c850bf1ca4';
+        sec-mem-ref-line = '591';
+        sec-mem-ref-name = 'cityOfplague.World::env';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1af50b9ec32a898a4da1ccbf2e31437d48';
+        sec-mem-ref-line = '310';
+        sec-mem-ref-name = 'initializeAgents';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ae280ffa59c66cc764c2e8d519ebeb536';
+        sec-mem-ref-line = '658';
+        sec-mem-ref-name = 'initializeEnv';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1aca453c0bde41f46386b498ff6c6a6512';
+        sec-mem-ref-line = '92';
+        sec-mem-ref-name = 'setup';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1a6f72f436dfd076b5902f3d4dd8b68ceb';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'visualizeModel';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+World
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'world';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '614';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Wizualizacja całości świata.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a47221820a93ea6cd3978ab439d6dd669';
+        sec-mem-ref-line = '590';
+        sec-mem-ref-name = 'cityOfplague.World::agents';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a88ffe51fbb105f69d4c223c850bf1ca4';
+        sec-mem-ref-line = '591';
+        sec-mem-ref-name = 'cityOfplague.World::env';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ab07037ce97f728d99dc3365cc297c3da';
+        sec-mem-ref-line = '1072';
+        sec-mem-ref-name = 'visualizeAgents';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a14ffad86665b26a947a3eae8b3773ccf';
+        sec-mem-ref-line = '1050';
+        sec-mem-ref-name = 'visualizeEnv';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ab3eb7fab6c778fffd1ce01a048df77ad';
+        sec-mem-ref-line = '133';
+        sec-mem-ref-name = 'draw';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a3e010c674bc522f38e4e129df7c921a3';
+        sec-mem-ref-line = '621';
+        sec-mem-ref-name = 'modelStep';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1aca453c0bde41f46386b498ff6c6a6512';
+        sec-mem-ref-line = '92';
+        sec-mem-ref-name = 'setup';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1a3e010c674bc522f38e4e129df7c921a3';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'modelStep';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+World
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'world';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '621';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Krok symulacji.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a47221820a93ea6cd3978ab439d6dd669';
+        sec-mem-ref-line = '590';
+        sec-mem-ref-name = 'cityOfplague.World::agents';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a144dcdd32025189e548f322e6bef694a';
+        sec-mem-ref-line = '450';
+        sec-mem-ref-name = 'agentsChange';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a88ffe51fbb105f69d4c223c850bf1ca4';
+        sec-mem-ref-line = '591';
+        sec-mem-ref-name = 'cityOfplague.World::env';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a308e6908b6434acb0149734d81e3b4ba';
+        sec-mem-ref-line = '1302';
+        sec-mem-ref-name = 'NextVideoFrame';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a1f1394368d57ab81b633a5c6eb73daa0';
+        sec-mem-ref-line = '59';
+        sec-mem-ref-name = 'protestStep';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1aa685d868bb4984e146180fca3254b295';
+        sec-mem-ref-line = '397';
+        sec-mem-ref-name = 'sheduleAgents';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ad32f77b4dc3856b24277567b8b2c3f61';
+        sec-mem-ref-line = '357';
+        sec-mem-ref-name = 'sheduleProtest';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a834fd9f6503117f4c6f2818cdec9f72b';
+        sec-mem-ref-line = '585';
+        sec-mem-ref-name = 'StepCounter';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a99b9fbbd98dadc8d28b2157f531e371d';
+        sec-mem-ref-line = '67';
+        sec-mem-ref-name = 'TheWorld';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a6f72f436dfd076b5902f3d4dd8b68ceb';
+        sec-mem-ref-line = '614';
+        sec-mem-ref-name = 'visualizeModel';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ab3eb7fab6c778fffd1ce01a048df77ad';
+        sec-mem-ref-line = '133';
+        sec-mem-ref-name = 'draw';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1ae280ffa59c66cc764c2e8d519ebeb536';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'initializeEnv';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'env';
+        sec-mem-param-array = '[][]';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '658';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Inicjalizacja środowiska.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a5e6ae71efe01fa4c3633eb8d2e01f85e';
+        sec-mem-ref-line = '677';
+        sec-mem-ref-name = 'avenue';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a70e81a9bd25af5bdda2d48d18b7861ea';
+        sec-mem-ref-line = '647';
+        sec-mem-ref-name = 'Env_WORK';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a27bc9a5057c079175a319dc5837d1982';
+        sec-mem-ref-line = '652';
+        sec-mem-ref-name = 'limit';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a273c85ed47949f1271a2f6e017b361e2';
+        sec-mem-ref-line = '709';
+        sec-mem-ref-name = 'sierpinskiCarpetRect';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a4e4ac6d3037ad4fedb1059d7381d169f';
+        sec-mem-ref-line = '693';
+        sec-mem-ref-name = 'street';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ab45a51ddda1218bdf14cf1e75bab42ab';
+        sec-mem-ref-line = '607';
+        sec-mem-ref-name = 'initializeModel';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1afa79ff3d9eebfc0558988175dd6e7003';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'fillblock';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'env';
+        sec-mem-param-array = '[][]';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'val';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'x1';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'y1';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'x2';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'y2';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '669';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Wypełnianie bloku środowiska.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a5e6ae71efe01fa4c3633eb8d2e01f85e';
+        sec-mem-ref-line = '677';
+        sec-mem-ref-name = 'avenue';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a273c85ed47949f1271a2f6e017b361e2';
+        sec-mem-ref-line = '709';
+        sec-mem-ref-name = 'sierpinskiCarpetRect';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a4e4ac6d3037ad4fedb1059d7381d169f';
+        sec-mem-ref-line = '693';
+        sec-mem-ref-name = 'street';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1a5e6ae71efe01fa4c3633eb8d2e01f85e';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'avenue';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'env';
+        sec-mem-param-array = '[][]';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+float
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'start';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+float
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'end';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '677';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Rysowanie alei (pionowo).
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a39fd5a0e2bb33759880db119e107b0f2';
+        sec-mem-ref-line = '655';
+        sec-mem-ref-name = 'avenuecount';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1abd4bb619d355a75e1f16a77654a9c4b1';
+        sec-mem-ref-line = '649';
+        sec-mem-ref-name = 'Env_ROAD';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a2d76d71d37dcc87c5869b002f5682034';
+        sec-mem-ref-line = '653';
+        sec-mem-ref-name = 'fcars';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1afa79ff3d9eebfc0558988175dd6e7003';
+        sec-mem-ref-line = '669';
+        sec-mem-ref-name = 'fillblock';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a27bc9a5057c079175a319dc5837d1982';
+        sec-mem-ref-line = '652';
+        sec-mem-ref-name = 'limit';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ae280ffa59c66cc764c2e8d519ebeb536';
+        sec-mem-ref-line = '658';
+        sec-mem-ref-name = 'initializeEnv';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1a4e4ac6d3037ad4fedb1059d7381d169f';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'street';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'env';
+        sec-mem-param-array = '[][]';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+float
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'start';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+float
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'end';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '693';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Rysowanie ulicy (poziomo).
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1abd4bb619d355a75e1f16a77654a9c4b1';
+        sec-mem-ref-line = '649';
+        sec-mem-ref-name = 'Env_ROAD';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a2d76d71d37dcc87c5869b002f5682034';
+        sec-mem-ref-line = '653';
+        sec-mem-ref-name = 'fcars';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1afa79ff3d9eebfc0558988175dd6e7003';
+        sec-mem-ref-line = '669';
+        sec-mem-ref-name = 'fillblock';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a27bc9a5057c079175a319dc5837d1982';
+        sec-mem-ref-line = '652';
+        sec-mem-ref-name = 'limit';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ac36ffc9333dfacfd1086927b5e8ef3e2';
+        sec-mem-ref-line = '654';
+        sec-mem-ref-name = 'streetcount';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ae280ffa59c66cc764c2e8d519ebeb536';
+        sec-mem-ref-line = '658';
+        sec-mem-ref-name = 'initializeEnv';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1a273c85ed47949f1271a2f6e017b361e2';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'sierpinskiCarpetRect';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'env';
+        sec-mem-param-array = '[][]';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'val';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'x';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'y';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'sizex';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'sizey';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '709';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Wypełnianie środowiska ulicami.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1afa79ff3d9eebfc0558988175dd6e7003';
+        sec-mem-ref-line = '669';
+        sec-mem-ref-name = 'fillblock';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a27bc9a5057c079175a319dc5837d1982';
+        sec-mem-ref-line = '652';
+        sec-mem-ref-name = 'limit';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ae280ffa59c66cc764c2e8d519ebeb536';
+        sec-mem-ref-line = '658';
+        sec-mem-ref-name = 'initializeEnv';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1a06a2eecb8191d3109a5996bcd9915f1a';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'histogram';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Agent
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'agents';
+        sec-mem-param-array = '[][]';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+float
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'startx';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+float
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'starty';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+float
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'hight';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '744';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Tablica frekwencji odporności wraz z rysowaniem.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+  Funkcja przechodzi po wszystkich agentach i zlicza wg. klas odpornosci.
+  Potem rysuje w zadanym miejscu histogram o maksymalnej wysokości 'hight'. 
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1acb054212fd33d47a54ca7740b39adf1c';
+        sec-mem-ref-line = '195';
+        sec-mem-ref-name = 'cityOfplague.Agent::immunity';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a586f36e82a7f658c4994a7b059de675f';
+        sec-mem-ref-line = '224';
+        sec-mem-ref-name = 'cityOfplague.Agent::isAlive';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a442ff654b2feec09ecb7e310c9b8515e';
+        sec-mem-ref-line = '738';
+        sec-mem-ref-name = 'Max';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ad7094e3ce7dedd641945c0894e3f5427';
+        sec-mem-ref-line = '153';
+        sec-mem-ref-name = 'writeStatusLine';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1a5db36bc1601ff5b83b3d0b970966083a';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'timeline';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+FloatList
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'data';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+float
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'startX';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+float
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'startY';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+float
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'height';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+boolean
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'logarithm';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '793';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Graph of changes over time
+(Wykres zmian w czasie)
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Funkcja rysuje przebieg jednej zmiennej.
+@param height - to maksymalna wysokość wykresu.
+@param logarithm - oznacza że dane zostaną zlogarytmowane. 
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ad7094e3ce7dedd641945c0894e3f5427';
+        sec-mem-ref-line = '153';
+        sec-mem-ref-name = 'writeStatusLine';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1aea4e54d086a2ab7497aee92c16d3c95f';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'timeline';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+FloatList
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'data_a';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+FloatList
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'data_b';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+FloatList
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'data_c';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+float
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'startX';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+float
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'startY';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+float
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'height';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+boolean
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'logarithm';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'color_a';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'color_b';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'color_c';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '856';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Gdy trzeba narysować historię kilku zmiennych.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+ To jest wersją bardzo prymitywną, ale działa :-D
+@note!:  wspólna skala!!! 
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a2a9979b6acc9efdce4af3d68a1aae149';
+        sec-mem-ref-line = '976';
+        sec-mem-ref-name = 'dottedLine';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1a2a9979b6acc9efdce4af3d68a1aae149';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'dottedLine';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+float
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'x1';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+float
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'y1';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+float
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'x2';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+float
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'y2';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+float
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'steps';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '976';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Rysowanie linii kropkowanej.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@note  wg.: https://processing.org/discourse/beta/num_1219255354.html 
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1aea4e54d086a2ab7497aee92c16d3c95f';
+        sec-mem-ref-line = '856';
+        sec-mem-ref-name = 'timeline';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1a653338e23145502495b58c82c70c37d1';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'initializeStats';
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '996';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Przygotowanie do zapisu statystyk.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+ Otwarcie pliku logu i zapis nagłówka zmiennych. 
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a3c901272a3b904a55ddf9f5a61fad9c0';
+        sec-mem-ref-line = '38';
+        sec-mem-ref-name = 'modelName';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a0d16d997f35f64418f57d5ab23339aa8';
+        sec-mem-ref-line = '992';
+        sec-mem-ref-name = 'outstat';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1a2dfca870cf3b45a394b79c3487eed2ef';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'doStatistics';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+World
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'world';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '1009';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Obliczanie i zapis statystyk.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@note  Do wywołania w <tt>draw()</tt> 
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a47221820a93ea6cd3978ab439d6dd669';
+        sec-mem-ref-line = '590';
+        sec-mem-ref-name = 'cityOfplague.World::agents';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ae598341621fec9c752f712e61e87e93b';
+        sec-mem-ref-line = '1018';
+        sec-mem-ref-name = 'doStatisticsOnAgents';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ab3eb7fab6c778fffd1ce01a048df77ad';
+        sec-mem-ref-line = '133';
+        sec-mem-ref-name = 'draw';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1aca453c0bde41f46386b498ff6c6a6512';
+        sec-mem-ref-line = '92';
+        sec-mem-ref-name = 'setup';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1ae598341621fec9c752f712e61e87e93b';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'doStatisticsOnAgents';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Agent
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'agents';
+        sec-mem-param-array = '[][]';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '1018';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Obliczanie statystyk dla agentów i ich zapis.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+ Większość statystyk jest obliczana w trakcie kroku symulacji,
+         ale tu są zapisywane, razem z tym co wyliczono po kroku.
+@note Każdy krok w jednym wierszu. 
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1afa3cab89a7308800c6188070eba2a11e';
+        sec-mem-ref-line = '79';
+        sec-mem-ref-name = 'cured';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a1b0b026079dfd604764f159eaef2f37d';
+        sec-mem-ref-line = '77';
+        sec-mem-ref-name = 'deaths';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1af17a9be217b099fe44e00bf6fa42e4b1';
+        sec-mem-ref-line = '71';
+        sec-mem-ref-name = 'liveCount';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a3aa1ea96b5c356b32acf1e2147aca231';
+        sec-mem-ref-line = '78';
+        sec-mem-ref-name = 'newcas';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a0d16d997f35f64418f57d5ab23339aa8';
+        sec-mem-ref-line = '992';
+        sec-mem-ref-name = 'outstat';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a834fd9f6503117f4c6f2818cdec9f72b';
+        sec-mem-ref-line = '585';
+        sec-mem-ref-name = 'StepCounter';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ade8599f588ec5222b60a1ad37ff601f7';
+        sec-mem-ref-line = '75';
+        sec-mem-ref-name = 'sumDeath';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a0ed01c309eeadaee98da5fb802bd445f';
+        sec-mem-ref-line = '73';
+        sec-mem-ref-name = 'sumInfected';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a53fd6fbeac709fa09b0a806c6753a59e';
+        sec-mem-ref-line = '74';
+        sec-mem-ref-name = 'sumRecovered';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a2dfca870cf3b45a394b79c3487eed2ef';
+        sec-mem-ref-line = '1009';
+        sec-mem-ref-name = 'doStatistics';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1a14ffad86665b26a947a3eae8b3773ccf';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'visualizeEnv';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'env';
+        sec-mem-param-array = '[][]';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '1050';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+World full of agents need method of visualisation on screen/window
+(Świat pełen agentów potrzebuje metody wizualizacji na ekranie/w oknie)
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Wizualizacja środowiska
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1af0087c0a96b4d0ebc6d40c8247d35be3';
+        sec-mem-ref-line = '83';
+        sec-mem-ref-name = 'cwidth';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a45e46b1c95741aef25229856ce7a9ea7';
+        sec-mem-ref-line = '646';
+        sec-mem-ref-name = 'Env_FLAT';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a82baccf9aa7b5eba1ff03f143f1eca42';
+        sec-mem-ref-line = '650';
+        sec-mem-ref-name = 'Env_REST';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1abd4bb619d355a75e1f16a77654a9c4b1';
+        sec-mem-ref-line = '649';
+        sec-mem-ref-name = 'Env_ROAD';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a70e81a9bd25af5bdda2d48d18b7861ea';
+        sec-mem-ref-line = '647';
+        sec-mem-ref-name = 'Env_WORK';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a6f72f436dfd076b5902f3d4dd8b68ceb';
+        sec-mem-ref-line = '614';
+        sec-mem-ref-name = 'visualizeModel';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1ab07037ce97f728d99dc3365cc297c3da';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'visualizeAgents';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Agent
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'agents';
+        sec-mem-param-array = '[][]';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '1072';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Wizualizacja agentów.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1af0087c0a96b4d0ebc6d40c8247d35be3';
+        sec-mem-ref-line = '83';
+        sec-mem-ref-name = 'cwidth';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a1c267123844f2a1e90fec5d904efc07d';
+        sec-mem-ref-line = '65';
+        sec-mem-ref-name = 'HostDeath';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1acb054212fd33d47a54ca7740b39adf1c';
+        sec-mem-ref-line = '195';
+        sec-mem-ref-name = 'cityOfplague.Agent::immunity';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ad4f45d6ed4f6af821350382cd0afd68c';
+        sec-mem-ref-line = '63';
+        sec-mem-ref-name = 'Infected';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ae3a45e18e69a1e8de02e76e659e29ad0';
+        sec-mem-ref-line = '194';
+        sec-mem-ref-name = 'cityOfplague.Agent::infection';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a45a67ef4bbd3e866a960a17fcddd04ed';
+        sec-mem-ref-line = '231';
+        sec-mem-ref-name = 'cityOfplague.Agent::isSusceptible';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a4462bc879bb562e6ec3794237974ef62';
+        sec-mem-ref-line = '64';
+        sec-mem-ref-name = 'Recovered';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a7b3a67b36e3179d4c5eaaa9c71c5a9e5';
+        sec-mem-ref-line = '549';
+        sec-mem-ref-name = 'cityOfplague.Virus::state';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a6f72f436dfd076b5902f3d4dd8b68ceb';
+        sec-mem-ref-line = '614';
+        sec-mem-ref-name = 'visualizeModel';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1aa58e9288d1f6475f5accf50e827ad211';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'keyPressed';
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '1113';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Event handling tailored to this model.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+(Dopasowana do modelu obsługa zdarzeń) 
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a3c901272a3b904a55ddf9f5a61fad9c0';
+        sec-mem-ref-line = '38';
+        sec-mem-ref-name = 'modelName';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a28b8a9dc3e0a2adb32b47429cb541678';
+        sec-mem-ref-line = '90';
+        sec-mem-ref-name = 'simulationRun';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a834fd9f6503117f4c6f2818cdec9f72b';
+        sec-mem-ref-line = '585';
+        sec-mem-ref-name = 'StepCounter';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a245f344093f138913546b49eb27e5464';
+        sec-mem-ref-line = '86';
+        sec-mem-ref-name = 'STEPSperVIS';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1ac15a6c49ed96a45749f36f5fde456e0a';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'exit';
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '1157';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Exit function is called whenever a window is closed.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a0875fd533d221ebfe357d7042bd3bcd9';
+        sec-mem-ref-line = '1308';
+        sec-mem-ref-name = 'CloseVideo';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a3c901272a3b904a55ddf9f5a61fad9c0';
+        sec-mem-ref-line = '38';
+        sec-mem-ref-name = 'modelName';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a0d16d997f35f64418f57d5ab23339aa8';
+        sec-mem-ref-line = '992';
+        sec-mem-ref-name = 'outstat';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a0385ab50bbea4d1c941dc7cacf7143e8';
+        sec-mem-ref-line = '89';
+        sec-mem-ref-name = 'WITH_VIDEO';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1a4d9fecc44e5babe663813ff87709c45f';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'mouseClicked';
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '1209';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Obsługa kliknięcia myszy.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@detail Szuka odpowiadającej komórki i agenta i wyświetla informacje o nich. 
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a4be4d3f435385e3f34a6a9785a5a0c95';
+        sec-mem-ref-line = '1197';
+        sec-mem-ref-name = 'cityOfplague.PairOfInt::a';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a47221820a93ea6cd3978ab439d6dd669';
+        sec-mem-ref-line = '590';
+        sec-mem-ref-name = 'cityOfplague.World::agents';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ae37c0d0da8af21f5486ce6fd21e01bde';
+        sec-mem-ref-line = '1198';
+        sec-mem-ref-name = 'cityOfplague.PairOfInt::b';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a88ffe51fbb105f69d4c223c850bf1ca4';
+        sec-mem-ref-line = '591';
+        sec-mem-ref-name = 'cityOfplague.World::env';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a953a67ab59f31c34e15d885e7d4e2de7';
+        sec-mem-ref-line = '1239';
+        sec-mem-ref-name = 'findCell';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a6c65bfe2ee776ec1761f27d254093560';
+        sec-mem-ref-line = '215';
+        sec-mem-ref-name = 'cityOfplague.Agent::fullInfo';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a659862df8a9f28e541dccd2915af9950';
+        sec-mem-ref-line = '573';
+        sec-mem-ref-name = 'cityOfplague.Virus::fullInfo';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ae3a45e18e69a1e8de02e76e659e29ad0';
+        sec-mem-ref-line = '194';
+        sec-mem-ref-name = 'cityOfplague.Agent::infection';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1aa56252905751aac927e5dd16c723cd76';
+        sec-mem-ref-line = '1182';
+        sec-mem-ref-name = 'searchedX';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a36eb7e7dcfe26188c8e79a2be136ea82';
+        sec-mem-ref-line = '1183';
+        sec-mem-ref-name = 'searchedY';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ace7e7d105e1264116e1521876952656c';
+        sec-mem-ref-line = '1188';
+        sec-mem-ref-name = 'selected';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ada34b46f2c5957c82883cea4b6b32de4';
+        sec-mem-ref-line = '1186';
+        sec-mem-ref-name = 'selectedX';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a0789740fc6c89a6e6349369f383f62a0';
+        sec-mem-ref-line = '1187';
+        sec-mem-ref-name = 'selectedY';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a99b9fbbd98dadc8d28b2157f531e371d';
+        sec-mem-ref-line = '67';
+        sec-mem-ref-name = 'TheWorld';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1a953a67ab59f31c34e15d885e7d4e2de7';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+PairOfInt
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'findCell';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Agent
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'agents';
+        sec-mem-param-array = '[][]';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '1239';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Poszukiwanie komórki która jest wizualizowana w danym punkcie okna.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+ Używamy globalnych zmiennych <tt>mouseX</tt> i <tt>mouseY</tt> dla szybkości. 
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1af0087c0a96b4d0ebc6d40c8247d35be3';
+        sec-mem-ref-line = '83';
+        sec-mem-ref-name = 'cwidth';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a4d9fecc44e5babe663813ff87709c45f';
+        sec-mem-ref-line = '1209';
+        sec-mem-ref-name = 'mouseClicked';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1a5e9b07f0c07e6e5e7712e6dadb445182';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'initVideoExport';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+processing.core.PApplet
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'parent';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+String
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'Name';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'Frames';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '1279';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a3eee91bdd8d49ee67746cd8c043899ea';
+        sec-mem-ref-line = '1274';
+        sec-mem-ref-name = 'videoExport';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ac0cbb45595bbf15aff9e159b084afbfe';
+        sec-mem-ref-line = '1328';
+        sec-mem-ref-name = 'videoExportEnabled';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a90b7cc39dd5127326561d6baabcaba44';
+        sec-mem-ref-line = '1277';
+        sec-mem-ref-name = 'videoFramesFreq';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1aca453c0bde41f46386b498ff6c6a6512';
+        sec-mem-ref-line = '92';
+        sec-mem-ref-name = 'setup';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1a306e478a270c71b1151b934e60c9a298';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'FirstVideoFrame';
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '1289';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a3eee91bdd8d49ee67746cd8c043899ea';
+        sec-mem-ref-line = '1274';
+        sec-mem-ref-name = 'videoExport';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ac0cbb45595bbf15aff9e159b084afbfe';
+        sec-mem-ref-line = '1328';
+        sec-mem-ref-name = 'videoExportEnabled';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a90b7cc39dd5127326561d6baabcaba44';
+        sec-mem-ref-line = '1277';
+        sec-mem-ref-name = 'videoFramesFreq';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1aca453c0bde41f46386b498ff6c6a6512';
+        sec-mem-ref-line = '92';
+        sec-mem-ref-name = 'setup';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1a308e6908b6434acb0149734d81e3b4ba';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'NextVideoFrame';
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '1302';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a3eee91bdd8d49ee67746cd8c043899ea';
+        sec-mem-ref-line = '1274';
+        sec-mem-ref-name = 'videoExport';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ac0cbb45595bbf15aff9e159b084afbfe';
+        sec-mem-ref-line = '1328';
+        sec-mem-ref-name = 'videoExportEnabled';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ab3eb7fab6c778fffd1ce01a048df77ad';
+        sec-mem-ref-line = '133';
+        sec-mem-ref-name = 'draw';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a3e010c674bc522f38e4e129df7c921a3';
+        sec-mem-ref-line = '621';
+        sec-mem-ref-name = 'modelStep';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1aca453c0bde41f46386b498ff6c6a6512';
+        sec-mem-ref-line = '92';
+        sec-mem-ref-name = 'setup';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1a0875fd533d221ebfe357d7042bd3bcd9';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'CloseVideo';
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '1308';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a3eee91bdd8d49ee67746cd8c043899ea';
+        sec-mem-ref-line = '1274';
+        sec-mem-ref-name = 'videoExport';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ac0cbb45595bbf15aff9e159b084afbfe';
+        sec-mem-ref-line = '1328';
+        sec-mem-ref-name = 'videoExportEnabled';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a90b7cc39dd5127326561d6baabcaba44';
+        sec-mem-ref-line = '1277';
+        sec-mem-ref-name = 'videoFramesFreq';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ac15a6c49ed96a45749f36f5fde456e0a';
+        sec-mem-ref-line = '1157';
+        sec-mem-ref-name = 'exit';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1a84faad7928346063dd7db25a5ee30e3e';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'settings';
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '1333';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-section = {
+    sec-kind = 'public-static-func';
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1ae60d887d887f04b2ce0746d3cacdfcfb';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+static void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'main';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+String[]
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'passedArgs';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '1334';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+  cp-fileline  = '34';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+Main class is generated by Processing and has same name as whole application.
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+    PL: 
+    Generalny pomysł jest taki, że mamy miasto podzielone drogami, złożone z obszarów mieszkalnych (jasne) i miejsc pracy (szare).
+    Ci sami agenci na zmianę są w domu lub w pracy, i wszędzie mogą zarazić się przez kontakt.
+    Stąd jeden krok symulacji to pół dnia - parzyste kroki w pracy, nieparzyste w domu, chyba że agent nie ma pracy.
+
+    Właściwości danego wirusa są opisane parametrami symulacji.
+    Właściwością agentów poza rozlosowaną z rozkładu dwumianowego "immunity" jest tylko wiedza o miejscu zamieszkania i miejscu pracy. 
+_EnD_oF_dEf_TeXt_;
+  cp-inheritancegraph = <<_EnD_oF_dEf_TeXt_
+      node = {
+        node-id    = 2;
+        node-label = 'PApplet';
+      }; /* node */
+      node = {
+        node-id    = 1;
+        node-label = 'cityOfplague';
+        node-link = {
+          node-link-id = 'classcityOfplague';
+        };
+        node-child = {
+          child-id = '2';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+
+_EnD_oF_dEf_TeXt_;
+  cp-collaborationgraph = <<_EnD_oF_dEf_TeXt_
+      node = {
+        node-id    = 8;
+        node-label = 'PrintWriter';
+      }; /* node */
+      node = {
+        node-id    = 5;
+        node-label = 'cityOfplague.Germ';
+        node-link = {
+          node-link-id = 'classcityOfplague_1_1Germ';
+        };
+        node-child = {
+          child-id = '6';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 6;
+        node-label = 'cityOfplague.Animalcule';
+        node-link = {
+          node-link-id = 'classcityOfplague_1_1Animalcule';
+        };
+      }; /* node */
+      node = {
+        node-id    = 3;
+        node-label = 'cityOfplague.Agent';
+        node-link = {
+          node-link-id = 'classcityOfplague_1_1Agent';
+        };
+        node-child = {
+          child-id = '4';
+          relation = usage;
+          edgelabel = <<_EnD_oF_dEf_TeXt_
+infection
+_EnD_oF_dEf_TeXt_;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 2;
+        node-label = 'PApplet';
+      }; /* node */
+      node = {
+        node-id    = 7;
+        node-label = 'cityOfplague.World';
+        node-link = {
+          node-link-id = 'classcityOfplague_1_1World';
+        };
+        node-child = {
+          child-id = '3';
+          relation = usage;
+          edgelabel = <<_EnD_oF_dEf_TeXt_
+agents
+_EnD_oF_dEf_TeXt_;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 4;
+        node-label = 'cityOfplague.Virus';
+        node-link = {
+          node-link-id = 'classcityOfplague_1_1Virus';
+        };
+        node-child = {
+          child-id = '5';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 1;
+        node-label = 'cityOfplague';
+        node-link = {
+          node-link-id = 'classcityOfplague';
+        };
+        node-child = {
+          child-id = '2';
+          relation = public-inheritance;
+        }; /* node-child */
+        node-child = {
+          child-id = '3';
+          relation = usage;
+          edgelabel = <<_EnD_oF_dEf_TeXt_
+selected
+_EnD_oF_dEf_TeXt_;
+        }; /* node-child */
+        node-child = {
+          child-id = '7';
+          relation = usage;
+          edgelabel = <<_EnD_oF_dEf_TeXt_
+TheWorld
+_EnD_oF_dEf_TeXt_;
+        }; /* node-child */
+        node-child = {
+          child-id = '8';
+          relation = usage;
+          edgelabel = <<_EnD_oF_dEf_TeXt_
+outstat
+_EnD_oF_dEf_TeXt_;
+        }; /* node-child */
+      }; /* node */
+
+_EnD_oF_dEf_TeXt_;
+}; /* class */
+class = {
+  cp-id     = 'classcityOfplague_1_1Germ';
+  cp-name   = 'cityOfplague::Germ';
+  cp-ref     = {
+    ref-type = base;
+    ref-id   = 'classcityOfplague_1_1Animalcule';
+    ref-prot = public;
+    ref-virt = non-virtual;
+  };
+  cp-ref     = {
+    ref-type = derived;
+    ref-id   = 'classcityOfplague_1_1Virus';
+    ref-prot = public;
+    ref-virt = non-virtual;
+  };
+  cp-section = {
+    sec-kind = 'public-func';
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1_1Germ_1a3a40673ce5599196dda1d97325cb5a53';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+boolean
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'hostIsDead';
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '535';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Czy zarazek już zabił żywiciela?                        <br>
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Domyślnie nigdy nie umiera bo to KATAR.
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1_1Germ_1ae8790d627a8bdab72a2d1a461af2ce21';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+String
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'fullInfo';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+String
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'fieldSeparator';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '538';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Opis danego zarazka.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a925700badd19fc8d4211eb997e4499af';
+        sec-mem-ref-line = '529';
+        sec-mem-ref-name = 'cityOfplague.Germ::pDeath';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1aa945a11fa010a9b43b90434f397936a6';
+        sec-mem-ref-line = '530';
+        sec-mem-ref-name = 'cityOfplague.Germ::pSickLeave';
+    };
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+  cp-fileline  = '527';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+Klasa bazowa zarazków.
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  cp-inheritancegraph = <<_EnD_oF_dEf_TeXt_
+      node = {
+        node-id    = 1;
+        node-label = 'cityOfplague.Germ';
+        node-link = {
+          node-link-id = 'classcityOfplague_1_1Germ';
+        };
+        node-child = {
+          child-id = '2';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 2;
+        node-label = 'cityOfplague.Animalcule';
+        node-link = {
+          node-link-id = 'classcityOfplague_1_1Animalcule';
+        };
+      }; /* node */
+      node = {
+        node-id    = 3;
+        node-label = 'cityOfplague.Virus';
+        node-link = {
+          node-link-id = 'classcityOfplague_1_1Virus';
+        };
+        node-child = {
+          child-id = '1';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+
+_EnD_oF_dEf_TeXt_;
+  cp-collaborationgraph = <<_EnD_oF_dEf_TeXt_
+      node = {
+        node-id    = 1;
+        node-label = 'cityOfplague.Germ';
+        node-link = {
+          node-link-id = 'classcityOfplague_1_1Germ';
+        };
+        node-child = {
+          child-id = '2';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 2;
+        node-label = 'cityOfplague.Animalcule';
+        node-link = {
+          node-link-id = 'classcityOfplague_1_1Animalcule';
+        };
+      }; /* node */
+
+_EnD_oF_dEf_TeXt_;
+}; /* class */
+class = {
+  cp-id     = 'classcityOfplague_1_1PairOfInt';
+  cp-name   = 'cityOfplague::PairOfInt';
+  cp-section = {
+    sec-kind = 'public-func';
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1_1PairOfInt_1aedf8dbef2018cd757dc25582ba1d6970';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'PairOfInt';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'a';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'b';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '1200';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a4be4d3f435385e3f34a6a9785a5a0c95';
+        sec-mem-ref-line = '1197';
+        sec-mem-ref-name = 'cityOfplague.PairOfInt::a';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1ae37c0d0da8af21f5486ce6fd21e01bde';
+        sec-mem-ref-line = '1198';
+        sec-mem-ref-name = 'cityOfplague.PairOfInt::b';
+    };
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-section = {
+    sec-kind = 'public-attrib';
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'classcityOfplague_1_1PairOfInt_1a4be4d3f435385e3f34a6a9785a5a0c95';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+final int
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'a';
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '1197';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a4d9fecc44e5babe663813ff87709c45f';
+        sec-mem-ref-line = '1209';
+        sec-mem-ref-name = 'cityOfplague::mouseClicked';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1aedf8dbef2018cd757dc25582ba1d6970';
+        sec-mem-ref-line = '1200';
+        sec-mem-ref-name = 'cityOfplague.PairOfInt::PairOfInt';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'classcityOfplague_1_1PairOfInt_1ae37c0d0da8af21f5486ce6fd21e01bde';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+final int
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'b';
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '1198';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a4d9fecc44e5babe663813ff87709c45f';
+        sec-mem-ref-line = '1209';
+        sec-mem-ref-name = 'cityOfplague::mouseClicked';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1aedf8dbef2018cd757dc25582ba1d6970';
+        sec-mem-ref-line = '1200';
+        sec-mem-ref-name = 'cityOfplague.PairOfInt::PairOfInt';
+    };
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+  cp-fileline  = '1195';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+Simple version of Pair class.
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+ For returning a pair of Int from a function 
+_EnD_oF_dEf_TeXt_;
+}; /* class */
+class = {
+  cp-id     = 'classPApplet';
+  cp-name   = 'PApplet';
+  cp-ref     = {
+    ref-type = derived;
+    ref-id   = 'classcityOfplague';
+    ref-prot = public;
+    ref-virt = non-virtual;
+  };
+  cp-filename  = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+  cp-fileline  = '34';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  cp-inheritancegraph = <<_EnD_oF_dEf_TeXt_
+      node = {
+        node-id    = 1;
+        node-label = 'PApplet';
+      }; /* node */
+      node = {
+        node-id    = 2;
+        node-label = 'cityOfplague';
+        node-link = {
+          node-link-id = 'classcityOfplague';
+        };
+        node-child = {
+          child-id = '1';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+
+_EnD_oF_dEf_TeXt_;
+}; /* class */
+class = {
+  cp-id     = 'classcityOfplague_1_1Virus';
+  cp-name   = 'cityOfplague::Virus';
+  cp-ref     = {
+    ref-type = base;
+    ref-id   = 'classcityOfplague_1_1Germ';
+    ref-prot = public;
+    ref-virt = non-virtual;
+  };
+  cp-section = {
+    sec-kind = 'public-func';
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1_1Virus_1aa412d0456f6f0be3ffd446d0f6b51d77';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+Virus
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'clone';
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '561';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Nowy wirus do zaatakowanie innego agenta. Mogłby ulec jakimś mutacjom.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a9a23ae6620f42092f06489864a337f33';
+        sec-mem-ref-line = '531';
+        sec-mem-ref-name = 'cityOfplague.Germ::duration';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a925700badd19fc8d4211eb997e4499af';
+        sec-mem-ref-line = '529';
+        sec-mem-ref-name = 'cityOfplague.Germ::pDeath';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1aa945a11fa010a9b43b90434f397936a6';
+        sec-mem-ref-line = '530';
+        sec-mem-ref-name = 'cityOfplague.Germ::pSickLeave';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a3d1cbd02bebed04202d91066fa9bec42';
+        sec-mem-ref-line = '552';
+        sec-mem-ref-name = 'cityOfplague.Virus::Virus';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a568c72c2b2db9a12860c0e98c8402d51';
+        sec-mem-ref-line = '294';
+        sec-mem-ref-name = 'cityOfplague.Agent::transferFrom';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1_1Virus_1a32007da2a9035430d56357a01ad3ebdc';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+boolean
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'hostIsDead';
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '567';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Czy już przekroczono miano krytyczne wirusa, które zabija żywiciela?
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a1c267123844f2a1e90fec5d904efc07d';
+        sec-mem-ref-line = '65';
+        sec-mem-ref-name = 'cityOfplague::HostDeath';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a7b3a67b36e3179d4c5eaaa9c71c5a9e5';
+        sec-mem-ref-line = '549';
+        sec-mem-ref-name = 'cityOfplague.Virus::state';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classcityOfplague_1_1Virus_1a659862df8a9f28e541dccd2915af9950';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+String
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'fullInfo';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+String
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'fieldSeparator';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+      sec-mem-desc-line = '573';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Informacja o zarazku.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a7b3a67b36e3179d4c5eaaa9c71c5a9e5';
+        sec-mem-ref-line = '549';
+        sec-mem-ref-name = 'cityOfplague.Virus::state';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'cityOfplague_8java_1a4d9fecc44e5babe663813ff87709c45f';
+        sec-mem-ref-line = '1209';
+        sec-mem-ref-name = 'cityOfplague::mouseClicked';
+    };
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+  cp-fileline  = '547';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+Klasa bazowa wszelkich wirusów.
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  cp-inheritancegraph = <<_EnD_oF_dEf_TeXt_
+      node = {
+        node-id    = 2;
+        node-label = 'cityOfplague.Germ';
+        node-link = {
+          node-link-id = 'classcityOfplague_1_1Germ';
+        };
+        node-child = {
+          child-id = '3';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 3;
+        node-label = 'cityOfplague.Animalcule';
+        node-link = {
+          node-link-id = 'classcityOfplague_1_1Animalcule';
+        };
+      }; /* node */
+      node = {
+        node-id    = 1;
+        node-label = 'cityOfplague.Virus';
+        node-link = {
+          node-link-id = 'classcityOfplague_1_1Virus';
+        };
+        node-child = {
+          child-id = '2';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+
+_EnD_oF_dEf_TeXt_;
+  cp-collaborationgraph = <<_EnD_oF_dEf_TeXt_
+      node = {
+        node-id    = 2;
+        node-label = 'cityOfplague.Germ';
+        node-link = {
+          node-link-id = 'classcityOfplague_1_1Germ';
+        };
+        node-child = {
+          child-id = '3';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 3;
+        node-label = 'cityOfplague.Animalcule';
+        node-link = {
+          node-link-id = 'classcityOfplague_1_1Animalcule';
+        };
+      }; /* node */
+      node = {
+        node-id    = 1;
+        node-label = 'cityOfplague.Virus';
+        node-link = {
+          node-link-id = 'classcityOfplague_1_1Virus';
+        };
+        node-child = {
+          child-id = '2';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+
+_EnD_oF_dEf_TeXt_;
+}; /* class */
+class = {
+  cp-id     = 'classcityOfplague_1_1World';
+  cp-name   = 'cityOfplague::World';
+  cp-filename  = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+  cp-fileline  = '588';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+Klasa świata symulacji. Łączy wszystkie niezbędne składowe modelu.
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  cp-collaborationgraph = <<_EnD_oF_dEf_TeXt_
+      node = {
+        node-id    = 4;
+        node-label = 'cityOfplague.Germ';
+        node-link = {
+          node-link-id = 'classcityOfplague_1_1Germ';
+        };
+        node-child = {
+          child-id = '5';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 5;
+        node-label = 'cityOfplague.Animalcule';
+        node-link = {
+          node-link-id = 'classcityOfplague_1_1Animalcule';
+        };
+      }; /* node */
+      node = {
+        node-id    = 2;
+        node-label = 'cityOfplague.Agent';
+        node-link = {
+          node-link-id = 'classcityOfplague_1_1Agent';
+        };
+        node-child = {
+          child-id = '3';
+          relation = usage;
+          edgelabel = <<_EnD_oF_dEf_TeXt_
+infection
+_EnD_oF_dEf_TeXt_;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 1;
+        node-label = 'cityOfplague.World';
+        node-link = {
+          node-link-id = 'classcityOfplague_1_1World';
+        };
+        node-child = {
+          child-id = '2';
+          relation = usage;
+          edgelabel = <<_EnD_oF_dEf_TeXt_
+agents
+_EnD_oF_dEf_TeXt_;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 3;
+        node-label = 'cityOfplague.Virus';
+        node-link = {
+          node-link-id = 'classcityOfplague_1_1Virus';
+        };
+        node-child = {
+          child-id = '4';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+
+_EnD_oF_dEf_TeXt_;
+}; /* class */
+file = {
+  file-id   = 'cityOfplague_8java';
+  file-name = 'cityOfplague.java';
+  file-full-name  = '/data/wb/SCC/public/CityOfPlague-model/doc/java.src/cityOfplague.java';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+ABM epidemic model with enviroment  - using template for AGENT BASE MODEL in 2D discrete geometry.
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'logfile_8txt';
+  file-name = 'logfile.txt';
+  file-full-name  = '/data/wb/SCC/public/CityOfPlague-model/doc/logfile.txt';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'README_8md';
+  file-name = 'README.md';
+  file-full-name  = '/data/wb/SCC/public/CityOfPlague-model/doc/README.md';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
