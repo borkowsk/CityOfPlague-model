@@ -51,7 +51,8 @@ PL:
 3) Jeden gospodarz w danej chwili może być żywicielem jednego szczepu wirusa.
 4) Miasto podzielone jest fraktalnie siecią ulic i alei o różnej szerokości.
 
-<img src="doc/screen.png"> Screendump of application window </img>
+Screendump of application window:
+![](./doc/screen.png)
 
 ### Access to the repository / PL:Dostęp do repozytorium
 
@@ -126,6 +127,6 @@ This project is sponsored by __Centre For Systemic Risk Analisis__.
 * _"Komórkowy model epidemii"_ : https://github.com/borkowsk/bookProcessingPL/tree/master/15_epidemia
   
 
-<img src="doc/Logo-ISS-CBRS-UW.png">logos</img>
+![](./doc/Logo-ISS-CBRS-UW.png)
 
 
