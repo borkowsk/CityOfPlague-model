@@ -1,3 +1,8 @@
 *.lst
+*~
 ffmpeg.txt
 ABMcity_of_plague.mp4
+application.*
+._bak/
+DoxDocs/docbook/
+DoxDocs/html/
